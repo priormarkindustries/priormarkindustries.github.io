@@ -16,44 +16,25 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-<!-- Font Awesome -->
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-
 <style>
 
-/* =========================================================
-   ROOT COLORS
-========================================================= */
-
 :root{
-
     --black:#071A2B;
     --black-2:#0B2238;
     --black-3:#123B63;
-
     --white:#ffffff;
     --soft:#F4F6F8;
-
     --gray:#A8B2BC;
     --gray-2:#68717C;
-
     --line:#DCE2E8;
-    --line-light:#E9EDF1;
-
     --accent:#C9A227;
     --accent-dark:#A88416;
-
     --shadow:0 25px 80px rgba(7,26,43,.16);
-
     --radius:24px;
 }
-
-
-/* =========================================================
-   RESET
-========================================================= */
 
 *{
     margin:0;
@@ -66,15 +47,10 @@ html{
 }
 
 body{
-
     font-family:Inter,sans-serif;
-
     color:var(--black);
-
-    background:var(--white);
-
+    background:white;
     line-height:1.7;
-
     overflow-x:hidden;
 }
 
@@ -96,76 +72,48 @@ select{
 }
 
 .container{
-
     width:min(1180px,92%);
-
     margin:auto;
 }
 
 
-/* =========================================================
-   HEADER
-========================================================= */
+/* ================= HEADER ================= */
 
 header{
-
     position:fixed;
-
     top:0;
     left:0;
-
     width:100%;
-
     z-index:1000;
-
     background:rgba(7,26,43,.94);
-
     backdrop-filter:blur(18px);
-
     border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .navbar{
-
     height:82px;
-
     display:flex;
-
     align-items:center;
-
     justify-content:space-between;
-
     gap:30px;
 }
 
 .logo{
-
     display:flex;
-
     align-items:center;
-
     gap:12px;
-
     color:white;
 }
 
 .logo-mark{
-
     width:48px;
     height:48px;
-
     border:1px solid var(--accent);
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     font-weight:800;
-
     font-size:17px;
-
     letter-spacing:-1px;
 }
 
@@ -174,402 +122,263 @@ header{
 }
 
 .logo-text strong{
-
     display:block;
-
     font-family:Manrope,sans-serif;
-
     font-size:16px;
-
     letter-spacing:1.5px;
 }
 
 .logo-text span{
-
     display:block;
-
     color:#A8B2BC;
-
     font-size:9px;
-
     letter-spacing:3px;
-
     margin-top:4px;
 }
 
 .nav-links{
-
     display:flex;
-
     align-items:center;
-
     gap:28px;
 }
 
 .nav-links a{
-
     color:#DCE4EA;
-
     font-size:13px;
-
     font-weight:600;
-
     transition:.3s;
 }
 
 .nav-links a:hover{
-
     color:var(--accent);
 }
 
 .nav-btn{
-
     padding:12px 18px;
-
     background:var(--accent);
-
     color:var(--black)!important;
-
     border-radius:5px;
-
     font-weight:800!important;
 }
 
 .menu-btn{
-
     display:none;
-
     color:white;
-
     background:none;
-
     border:0;
-
     font-size:26px;
-
     cursor:pointer;
 }
 
 
-/* =========================================================
-   HERO
-========================================================= */
+/* ================= HERO ================= */
 
 .hero{
-
     min-height:760px;
-
     padding-top:82px;
-
     background:
-
         linear-gradient(
             90deg,
             rgba(7,26,43,.97),
             rgba(7,26,43,.74),
             rgba(7,26,43,.42)
         ),
-
         url("images/hero/hero-01.jpeg")
         center/cover no-repeat;
-
     display:flex;
-
     align-items:center;
-
     position:relative;
 }
 
 .hero::after{
-
     content:"";
-
     position:absolute;
-
     inset:0;
-
     background:
         linear-gradient(
             to bottom,
             transparent 70%,
             rgba(7,26,43,.9)
         );
-
     pointer-events:none;
 }
 
 .hero-content{
-
     max-width:800px;
-
     position:relative;
-
     z-index:2;
 }
 
 .hero-kicker{
-
     display:flex;
-
     align-items:center;
-
     gap:12px;
-
     color:#DDE5EB;
-
     font-size:12px;
-
     text-transform:uppercase;
-
     letter-spacing:2px;
-
     font-weight:700;
-
     margin-bottom:25px;
 }
 
 .hero-kicker span{
-
     width:35px;
-
     height:2px;
-
     background:var(--accent);
-
     display:block;
 }
 
 .hero h1{
-
     color:white;
-
     font-family:Manrope,sans-serif;
-
     font-size:clamp(42px,6vw,76px);
-
     line-height:1.05;
-
     letter-spacing:-3px;
-
     margin-bottom:28px;
 }
 
 .hero h1 em{
-
     color:var(--accent);
-
     font-style:normal;
 }
 
 .hero p{
-
     max-width:700px;
-
     color:#D0D9E0;
-
     font-size:17px;
-
     line-height:1.8;
-
     margin-bottom:35px;
 }
 
 .hero-buttons{
-
     display:flex;
-
     gap:14px;
-
     flex-wrap:wrap;
 }
 
 .btn{
-
     display:inline-flex;
-
     align-items:center;
-
     justify-content:center;
-
     padding:15px 24px;
-
     border-radius:5px;
-
     font-weight:800;
-
     font-size:13px;
-
     transition:.3s;
 }
 
 .btn-primary{
-
     background:var(--accent);
-
     color:var(--black);
 }
 
 .btn-primary:hover{
-
     background:#DFC052;
-
     transform:translateY(-2px);
 }
 
 .btn-outline{
-
     border:1px solid rgba(255,255,255,.35);
-
     color:white;
 }
 
 .btn-outline:hover{
-
     border-color:var(--accent);
-
     color:var(--accent);
 }
 
 
-/* =========================================================
-   TRUST BAR
-========================================================= */
+/* ================= TRUST ================= */
 
 .trust-bar{
-
     background:var(--black-2);
-
     color:white;
-
     border-top:1px solid rgba(255,255,255,.06);
-
     border-bottom:1px solid rgba(255,255,255,.06);
 }
 
 .trust-grid{
-
     display:grid;
-
     grid-template-columns:repeat(4,1fr);
 }
 
 .trust-item{
-
     padding:25px 20px;
-
     border-right:1px solid rgba(255,255,255,.08);
 }
 
 .trust-item:last-child{
-
     border-right:0;
 }
 
 .trust-item strong{
-
     display:block;
-
     font-size:14px;
-
     margin-bottom:4px;
 }
 
 .trust-item span{
-
     color:#9DAAB5;
-
     font-size:11px;
 }
 
 
-/* =========================================================
-   GENERAL
-========================================================= */
+/* ================= GENERAL ================= */
 
 section{
     padding:110px 0;
 }
 
 .section-head{
-
     max-width:760px;
-
     margin-bottom:55px;
 }
 
 .section-label{
-
     color:var(--gray-2);
-
     font-size:11px;
-
     text-transform:uppercase;
-
     letter-spacing:2.5px;
-
     font-weight:800;
-
     display:flex;
-
     align-items:center;
-
     gap:12px;
-
     margin-bottom:18px;
 }
 
 .section-label::before{
-
     content:"";
-
     width:28px;
-
     height:2px;
-
     background:var(--accent);
 }
 
 .section-title{
-
     font-family:Manrope,sans-serif;
-
     font-size:clamp(32px,4vw,52px);
-
     line-height:1.1;
-
     letter-spacing:-2px;
-
     color:var(--black);
-
     margin-bottom:18px;
 }
 
 .section-text{
-
     color:var(--gray-2);
-
     font-size:15px;
-
     max-width:720px;
 }
 
 
-/* =========================================================
-   ABOUT
-========================================================= */
+/* ================= ABOUT ================= */
 
 .about{
     background:white;
 }
 
 .about-grid{
-
     display:grid;
-
     grid-template-columns:1fr 1fr;
-
     gap:70px;
-
     align-items:center;
 }
 
@@ -578,183 +387,117 @@ section{
 }
 
 .about-image img{
-
     width:100%;
-
     height:560px;
-
     object-fit:cover;
-
     border-radius:var(--radius);
-
     box-shadow:var(--shadow);
 }
 
 .about-badge{
-
     position:absolute;
-
     right:-25px;
-
     bottom:30px;
-
     background:var(--accent);
-
     color:var(--black);
-
     padding:25px;
-
     width:180px;
-
     border-radius:15px;
-
     box-shadow:var(--shadow);
 }
 
 .about-badge strong{
-
     font-size:30px;
-
     display:block;
-
     line-height:1;
 }
 
 .about-badge span{
-
     font-size:11px;
-
     font-weight:800;
-
     text-transform:uppercase;
-
     letter-spacing:1px;
 }
 
 .about-copy p{
-
     color:var(--gray-2);
-
     margin-bottom:20px;
 }
 
 .check-list{
-
     display:grid;
-
     gap:13px;
-
     margin-top:28px;
 }
 
 .check{
-
     display:flex;
-
     align-items:center;
-
     gap:12px;
-
     font-size:13px;
-
     font-weight:700;
 }
 
 .check span{
-
     width:25px;
-
     height:25px;
-
     border-radius:50%;
-
     background:var(--accent);
-
     color:var(--black);
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     font-weight:900;
 }
 
 
-/* =========================================================
-   PRODUCTS
-========================================================= */
+/* ================= PRODUCTS ================= */
 
 .products{
-
     background:var(--soft);
 }
 
 .products-grid{
-
     display:grid;
-
     grid-template-columns:repeat(3,1fr);
-
     gap:25px;
 }
 
 .product-card{
-
     background:white;
-
     border:1px solid var(--line);
-
     border-radius:var(--radius);
-
     overflow:hidden;
-
     cursor:pointer;
-
     transition:.35s;
 }
 
 .product-card:hover{
-
     transform:translateY(-8px);
-
     border-color:var(--accent);
-
     box-shadow:var(--shadow);
 }
 
 .product-image{
-
     height:320px;
-
     overflow:hidden;
-
     position:relative;
 }
 
 .product-image img{
-
     width:100%;
-
     height:100%;
-
     object-fit:cover;
-
     transition:.6s;
 }
 
 .product-card:hover .product-image img{
-
     transform:scale(1.06);
 }
 
 .product-overlay{
-
     position:absolute;
-
     inset:0;
-
     background:
         linear-gradient(
             to top,
@@ -764,1172 +507,757 @@ section{
 }
 
 .product-content{
-
     padding:25px;
 }
 
 .product-content small{
-
     color:var(--accent-dark);
-
     font-weight:800;
-
     font-size:10px;
-
     letter-spacing:2px;
-
     text-transform:uppercase;
 }
 
 .product-content h3{
-
     font-family:Manrope,sans-serif;
-
     font-size:25px;
-
     margin:8px 0 10px;
 }
 
 .product-content p{
-
     color:var(--gray-2);
-
     font-size:13px;
-
     margin-bottom:20px;
 }
 
 .view-folder{
-
     display:inline-flex;
-
     align-items:center;
-
     gap:8px;
-
     background:var(--accent);
-
     color:var(--black);
-
     padding:11px 15px;
-
     border-radius:5px;
-
     font-size:11px;
-
     font-weight:800;
 }
 
 
-/* =========================================================
-   CAPABILITIES
-========================================================= */
+/* ================= CAPABILITIES ================= */
 
 .capabilities{
-
     background:white;
 }
 
 .capabilities-grid{
-
     display:grid;
-
     grid-template-columns:repeat(2,1fr);
-
     gap:1px;
-
     background:var(--line);
-
     border:1px solid var(--line);
 }
 
 .capability{
-
     background:white;
-
     padding:35px;
-
     min-height:230px;
 }
 
 .capability-number{
-
     color:var(--accent);
-
     font-size:13px;
-
     font-weight:900;
-
     letter-spacing:2px;
-
     margin-bottom:25px;
 }
 
 .capability h3{
-
     font-family:Manrope,sans-serif;
-
     font-size:22px;
-
     margin-bottom:12px;
 }
 
 .capability p{
-
     color:var(--gray-2);
-
     font-size:13px;
 }
 
 
-/* =========================================================
-   OEM
-========================================================= */
+/* ================= OEM ================= */
 
 .oem{
-
     background:var(--black);
-
     color:white;
 }
 
 .oem .section-label{
-
     color:#AAB6C0;
 }
 
 .oem .section-title{
-
     color:white;
 }
 
 .oem .section-text{
-
     color:#AAB6C0;
 }
 
 .oem-grid{
-
     display:grid;
-
     grid-template-columns:1fr 1fr;
-
     gap:70px;
-
     align-items:center;
 }
 
 .oem-list{
-
     display:grid;
-
     gap:1px;
-
     background:#1D3A52;
 }
 
 .oem-item{
-
     padding:23px;
-
     background:var(--black-2);
-
     display:flex;
-
     gap:18px;
-
     align-items:flex-start;
 }
 
 .number{
-
     color:var(--accent-dark);
-
     font-weight:900;
-
     font-size:13px;
 }
 
 .oem-item h4{
-
     font-size:15px;
-
     margin-bottom:4px;
 }
 
 .oem-item p{
-
     color:#9DAAB5;
-
     font-size:12px;
 }
 
 
-/* =========================================================
-   CUSTOMIZATION
-========================================================= */
+/* ================= CUSTOMIZATION ================= */
 
 .customization{
-
     background:var(--soft);
 }
 
 .custom-grid{
-
     display:grid;
-
     grid-template-columns:repeat(3,1fr);
-
     gap:20px;
 }
 
 .custom-box{
-
     background:white;
-
     padding:35px;
-
     border-radius:18px;
-
     border:1px solid var(--line);
-
     transition:.3s;
 }
 
 .custom-box:hover{
-
     transform:translateY(-5px);
-
     border-color:var(--accent);
 }
 
 .custom-icon{
-
     width:52px;
-
     height:52px;
-
     background:var(--black);
-
     color:var(--accent);
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     border-radius:12px;
-
     font-weight:900;
-
     margin-bottom:22px;
 }
 
 .custom-box h3{
-
     font-size:18px;
-
     margin-bottom:9px;
 }
 
 .custom-box p{
-
     color:var(--gray-2);
-
     font-size:12px;
 }
 
 
-/* =========================================================
-   PROCESS
-========================================================= */
+/* ================= PROCESS ================= */
 
 .process{
-
     background:white;
 }
 
 .process-grid{
-
     display:grid;
-
     grid-template-columns:repeat(4,1fr);
-
     gap:0;
-
     border-top:1px solid var(--line);
-
     border-bottom:1px solid var(--line);
 }
 
 .process-step{
-
     padding:35px 25px;
-
     border-right:1px solid var(--line);
 }
 
 .process-step:last-child{
-
     border-right:0;
 }
 
 .process-num{
-
     color:var(--accent-dark);
-
     font-weight:900;
-
     font-size:12px;
-
     letter-spacing:2px;
-
     margin-bottom:35px;
 }
 
 .process-step h3{
-
     font-family:Manrope,sans-serif;
-
     font-size:19px;
-
     margin-bottom:10px;
 }
 
 .process-step p{
-
     color:var(--gray-2);
-
     font-size:12px;
 }
 
 
-/* =========================================================
-   QUALITY
-========================================================= */
+/* ================= QUALITY ================= */
 
 .quality{
-
     background:var(--soft);
 }
 
 .quality-grid{
-
     display:grid;
-
     grid-template-columns:1fr 1fr;
-
     gap:30px;
 }
 
 .quality-box{
-
     background:white;
-
     padding:40px;
-
     border-radius:20px;
-
     border:1px solid var(--line);
 }
 
 .quality-box h3{
-
     font-family:Manrope,sans-serif;
-
     font-size:25px;
-
     margin-bottom:15px;
 }
 
 .quality-box p{
-
     color:var(--gray-2);
-
     font-size:13px;
 }
 
 
-/* =========================================================
-   PACKAGING
-========================================================= */
+/* ================= PACKAGING ================= */
 
 .packaging{
-
     background:white;
 }
 
 .packaging-grid{
-
     display:grid;
-
     grid-template-columns:1fr 1fr;
-
     gap:60px;
-
     align-items:center;
 }
 
 .packaging-image img{
-
     height:480px;
-
     width:100%;
-
     object-fit:cover;
-
     border-radius:var(--radius);
 }
 
 .packaging-content p{
-
     color:var(--gray-2);
-
     font-size:14px;
-
     margin-bottom:25px;
 }
 
 .packaging-points{
-
     display:grid;
-
     gap:12px;
 }
 
 .packaging-points div{
-
     padding:14px 18px;
-
     border-left:3px solid var(--accent);
-
     background:var(--soft);
-
     font-size:13px;
-
     font-weight:700;
 }
 
 
-/* =========================================================
-   GLOBAL
-========================================================= */
+/* ================= GLOBAL ================= */
 
 .global{
-
     background:var(--black);
-
     color:white;
 }
 
 .global-box{
-
     border:1px solid #1D3A52;
-
     padding:60px;
-
     border-radius:25px;
-
     background:
-
         radial-gradient(
             circle at 80% 20%,
             rgba(201,162,39,.12),
             transparent 30%
         ),
-
         var(--black-2);
 }
 
 .global-box h2{
-
     font-family:Manrope,sans-serif;
-
     font-size:clamp(32px,4vw,55px);
-
     line-height:1.1;
-
     letter-spacing:-2px;
-
     max-width:700px;
-
     margin-bottom:20px;
 }
 
 .global-box p{
-
     color:#AAB6C0;
-
     max-width:700px;
-
     font-size:14px;
-
     margin-bottom:28px;
 }
 
 
-/* =========================================================
-   FAQ
-========================================================= */
+/* ================= FAQ ================= */
 
 .faq{
-
     background:white;
 }
 
 .faq-wrap{
-
     max-width:850px;
 }
 
 .faq-item{
-
     border-bottom:1px solid var(--line);
 }
 
 .faq-question{
-
     width:100%;
-
     border:0;
-
     background:none;
-
     padding:24px 0;
-
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
-
     text-align:left;
-
     cursor:pointer;
-
     font-size:15px;
-
     font-weight:800;
-
     color:var(--black);
 }
 
 .faq-question span{
-
     font-size:22px;
-
     color:var(--accent-dark);
 }
 
 .faq-answer{
-
     display:none;
-
     padding:0 0 25px;
-
     color:var(--gray-2);
-
     font-size:13px;
 }
 
 .faq-item.active .faq-answer{
-
     display:block;
 }
 
 
-/* =========================================================
-   CONTACT
-========================================================= */
+/* ================= CONTACT ================= */
 
 .contact{
-
     background:var(--soft);
 }
 
 .contact-grid{
-
     display:grid;
-
     grid-template-columns:1fr 1fr;
-
     gap:50px;
 }
 
 .contact-info h2{
-
     font-family:Manrope,sans-serif;
-
     font-size:45px;
-
     line-height:1.1;
-
     letter-spacing:-2px;
-
     margin-bottom:20px;
 }
 
 .contact-info > p{
-
     color:var(--gray-2);
-
     margin-bottom:30px;
 }
 
 .contact-details{
-
     display:grid;
-
     gap:15px;
 }
 
 .contact-detail{
-
     background:white;
-
     padding:18px;
-
     border:1px solid var(--line);
-
     border-radius:10px;
 }
 
 .contact-detail small{
-
     display:block;
-
     color:var(--gray-2);
-
     font-size:10px;
-
     text-transform:uppercase;
-
     letter-spacing:1.5px;
-
     font-weight:800;
 }
 
 .contact-detail strong{
-
     font-size:14px;
 }
 
 .contact-form{
-
     background:white;
-
     padding:35px;
-
     border-radius:20px;
-
     border:1px solid var(--line);
-
-    box-shadow:
-        0 15px 50px rgba(7,26,43,.06);
+    box-shadow:0 15px 50px rgba(7,26,43,.06);
 }
 
 .form-row{
-
     display:grid;
-
     grid-template-columns:1fr 1fr;
-
     gap:15px;
 }
 
 .form-group{
-
     margin-bottom:15px;
 }
 
 .form-group label{
-
     display:block;
-
     font-size:11px;
-
     font-weight:800;
-
     margin-bottom:7px;
 }
 
 .form-group input,
 .form-group textarea,
 .form-group select{
-
     width:100%;
-
     border:1px solid var(--line);
-
     padding:13px;
-
     border-radius:6px;
-
     outline:none;
-
     font-size:13px;
-
     background:#FAFBFC;
 }
 
 .form-group input:focus,
 .form-group textarea:focus,
 .form-group select:focus{
-
     border-color:var(--accent);
 }
 
 .form-group textarea{
-
     min-height:130px;
-
     resize:vertical;
 }
 
 
-/* =========================================================
-   FOOTER
-========================================================= */
+/* ================= FOOTER ================= */
 
 footer{
-
     background:var(--black);
-
     color:white;
-
     padding:70px 0 25px;
 }
 
 .footer-grid{
-
     display:grid;
-
     grid-template-columns:2fr 1fr 1fr 1.2fr;
-
     gap:50px;
-
     padding-bottom:45px;
 }
 
 .footer-brand p{
-
     color:#9DAAB5;
-
     font-size:12px;
-
     max-width:330px;
-
     margin-top:20px;
 }
 
 .footer-col h4{
-
     font-size:12px;
-
     text-transform:uppercase;
-
     letter-spacing:1.5px;
-
     margin-bottom:20px;
 }
 
 .footer-col a{
-
     display:block;
-
     color:#9DAAB5;
-
     font-size:12px;
-
     margin-bottom:9px;
-
     transition:.3s;
 }
 
 .footer-col a:hover{
-
     color:var(--accent);
 }
 
 
-/* =========================================================
-   SMALL FOOTER SOCIAL LINKS ONLY
-========================================================= */
+/* ================= SOCIAL ================= */
 
 .footer-social{
-
     display:flex;
-
     align-items:center;
-
     gap:18px;
-
     padding:20px 0;
-
     border-top:1px solid rgba(255,255,255,.1);
-
     border-bottom:1px solid rgba(255,255,255,.1);
-
     flex-wrap:wrap;
 }
 
 .footer-social a{
-
     display:inline-flex;
-
     align-items:center;
-
     gap:6px;
-
     color:#9DAAB5;
-
     font-size:10px;
-
     font-weight:600;
-
     transition:.3s;
 }
 
 .footer-social a i{
-
     font-size:13px;
 }
 
 .footer-social a:hover{
-
     color:var(--accent);
 }
-
-.footer-social a:hover i{
-
-    color:var(--accent);
-}
-
 
 .footer-bottom{
-
     padding-top:25px;
-
     display:flex;
-
     justify-content:space-between;
-
     gap:20px;
-
     color:#71808C;
-
     font-size:10px;
 }
 
 
-/* =========================================================
-   WHATSAPP
-========================================================= */
+/* ================= WHATSAPP ================= */
 
 .whatsapp{
-
     position:fixed;
-
     right:25px;
-
     bottom:25px;
-
     width:58px;
-
     height:58px;
-
     border-radius:50%;
-
     background:#25D366;
-
     color:white;
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     z-index:900;
-
-    box-shadow:
-        0 12px 35px rgba(0,0,0,.2);
-
+    box-shadow:0 12px 35px rgba(0,0,0,.2);
     font-size:24px;
 }
 
 
-/* =========================================================
-   GALLERY MODAL
-========================================================= */
+/* ================= GALLERY ================= */
 
 .gallery-modal{
-
     position:fixed;
-
     inset:0;
-
     background:rgba(4,15,26,.96);
-
     z-index:2000;
-
     display:none;
-
     overflow-y:auto;
-
     padding:50px 20px;
 }
 
 .gallery-modal.active{
-
     display:block;
 }
 
 .gallery-header{
-
     width:min(1100px,100%);
-
     margin:0 auto 30px;
-
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
-
     color:white;
 }
 
 .gallery-header h2{
-
     font-family:Manrope,sans-serif;
-
     font-size:32px;
 }
 
 .gallery-header p{
-
     color:#9DAAB5;
-
     font-size:12px;
 }
 
 .gallery-close{
-
     width:45px;
-
     height:45px;
-
     border:1px solid rgba(255,255,255,.2);
-
     color:white;
-
     background:none;
-
     cursor:pointer;
-
     font-size:25px;
-
     border-radius:8px;
 }
 
 .gallery-grid{
-
     width:min(1100px,100%);
-
     margin:auto;
-
     display:grid;
-
     grid-template-columns:repeat(3,1fr);
-
     gap:15px;
 }
 
 .gallery-item{
-
     height:300px;
-
     overflow:hidden;
-
     border-radius:12px;
-
     cursor:pointer;
-
     background:#0B2238;
 }
 
 .gallery-item img{
-
     width:100%;
-
     height:100%;
-
     object-fit:cover;
-
     transition:.5s;
 }
 
 .gallery-item:hover img{
-
     transform:scale(1.05);
 }
 
 
-/* =========================================================
-   LIGHTBOX
-========================================================= */
+/* ================= LIGHTBOX ================= */
 
 .lightbox{
-
     position:fixed;
-
     inset:0;
-
     background:rgba(0,0,0,.96);
-
     z-index:3000;
-
     display:none;
-
     align-items:center;
-
     justify-content:center;
-
     padding:30px;
 }
 
 .lightbox.active{
-
     display:flex;
 }
 
 .lightbox img{
-
     max-width:90vw;
-
     max-height:85vh;
-
     object-fit:contain;
 }
 
 .lightbox-close{
-
     position:absolute;
-
     top:25px;
-
     right:30px;
-
     color:white;
-
     background:none;
-
     border:0;
-
     font-size:35px;
-
     cursor:pointer;
 }
 
 .lightbox-prev,
 .lightbox-next{
-
     position:absolute;
-
     top:50%;
-
     transform:translateY(-50%);
-
     width:50px;
-
     height:50px;
-
     border-radius:50%;
-
     background:rgba(255,255,255,.1);
-
     border:1px solid rgba(255,255,255,.2);
-
     color:white;
-
     cursor:pointer;
-
     font-size:25px;
 }
 
 .lightbox-prev{
-
     left:25px;
 }
 
 .lightbox-next{
-
     right:25px;
 }
 
 
-/* =========================================================
-   REVEAL
-========================================================= */
+/* ================= REVEAL ================= */
 
 .reveal{
-
     opacity:0;
-
     transform:translateY(25px);
-
     transition:.8s ease;
 }
 
 .reveal.show{
-
     opacity:1;
-
     transform:translateY(0);
 }
 
 
-/* =========================================================
-   RESPONSIVE
-========================================================= */
+/* ================= RESPONSIVE ================= */
 
 @media(max-width:900px){
 
     .nav-links{
-
         position:absolute;
-
         top:82px;
-
         left:0;
-
         width:100%;
-
         background:var(--black);
-
         padding:25px;
-
         flex-direction:column;
-
         align-items:flex-start;
-
         display:none;
     }
 
     .nav-links.active{
-
         display:flex;
     }
 
     .menu-btn{
-
         display:block;
     }
 
     .trust-grid{
-
         grid-template-columns:repeat(2,1fr);
     }
 
@@ -1938,186 +1266,146 @@ footer{
     .packaging-grid,
     .contact-grid,
     .quality-grid{
-
         grid-template-columns:1fr;
     }
 
     .products-grid{
-
         grid-template-columns:1fr 1fr;
     }
 
     .custom-grid{
-
         grid-template-columns:1fr 1fr;
     }
 
     .process-grid{
-
         grid-template-columns:1fr 1fr;
     }
 
     .process-step:nth-child(2){
-
         border-right:0;
     }
 
     .process-step:nth-child(-n+2){
-
         border-bottom:1px solid var(--line);
     }
 
     .footer-grid{
-
         grid-template-columns:1fr 1fr;
     }
 
     .gallery-grid{
-
         grid-template-columns:1fr 1fr;
     }
-
 }
 
 
 @media(max-width:600px){
 
     section{
-
         padding:80px 0;
     }
 
     .navbar{
-
         height:72px;
     }
 
     .nav-links{
-
         top:72px;
     }
 
     .hero{
-
         padding-top:72px;
-
         min-height:680px;
     }
 
     .hero h1{
-
         font-size:43px;
-
         letter-spacing:-2px;
     }
 
     .hero p{
-
         font-size:14px;
     }
 
     .trust-grid{
-
         grid-template-columns:1fr 1fr;
     }
 
     .trust-item{
-
         padding:20px 12px;
     }
 
     .products-grid,
     .custom-grid{
-
         grid-template-columns:1fr;
     }
 
     .capabilities-grid{
-
         grid-template-columns:1fr;
     }
 
     .process-grid{
-
         grid-template-columns:1fr;
     }
 
     .process-step{
-
         border-right:0;
-
         border-bottom:1px solid var(--line);
     }
 
     .process-step:last-child{
-
         border-bottom:0;
     }
 
     .gallery-grid{
-
         grid-template-columns:1fr;
     }
 
     .gallery-item{
-
         height:280px;
     }
 
     .global-box{
-
         padding:35px 25px;
     }
 
     .contact-info h2{
-
         font-size:36px;
     }
 
     .form-row{
-
         grid-template-columns:1fr;
     }
 
     .footer-grid{
-
         grid-template-columns:1fr;
-
         gap:35px;
     }
 
     .footer-bottom{
-
         flex-direction:column;
     }
 
     .about-image img{
-
         height:400px;
     }
 
     .about-badge{
-
         right:15px;
-
         bottom:15px;
     }
 
     .footer-social{
-
         gap:13px 18px;
     }
 
     .footer-social a{
-
         font-size:9px;
     }
 
     .footer-social a i{
-
         font-size:12px;
     }
-
 }
 
 </style>
@@ -2128,14 +1416,11 @@ footer{
 <body>
 
 
-<!-- =========================================================
-     HEADER
-========================================================= -->
+<!-- ================= HEADER ================= -->
 
 <header>
 
 <div class="container navbar">
-
 
 <a href="#home" class="logo">
 
@@ -2167,36 +1452,20 @@ onclick="toggleMenu()">
 class="nav-links"
 id="navLinks">
 
-<a href="#home">
-Home
-</a>
+<a href="#home">Home</a>
 
-<a href="#about">
-About
-</a>
+<a href="#about">About</a>
 
-<a href="#products">
-Products
-</a>
+<a href="#products">Products</a>
 
-<a href="#capabilities">
-Capabilities
-</a>
+<a href="#capabilities">Capabilities</a>
 
-<a href="#process">
-Process
-</a>
+<a href="#process">Process</a>
 
-<a href="#faq">
-FAQ
-</a>
+<a href="#faq">FAQ</a>
 
-<a
-href="#contact"
-class="nav-btn">
-
+<a href="#contact" class="nav-btn">
 Get in Touch
-
 </a>
 
 </nav>
@@ -2206,14 +1475,9 @@ Get in Touch
 </header>
 
 
+<!-- ================= HERO ================= -->
 
-<!-- =========================================================
-     HERO
-========================================================= -->
-
-<section
-class="hero"
-id="home">
+<section class="hero" id="home">
 
 <div class="container">
 
@@ -2232,9 +1496,7 @@ Pakistan-Based Sports Manufacturer
 
 ENGINEERED FOR PERFORMANCE.<br>
 
-<em>
-MANUFACTURED FOR YOUR BRAND.
-</em>
+<em>MANUFACTURED FOR YOUR BRAND.</em>
 
 </h1>
 
@@ -2252,21 +1514,12 @@ requirements.
 
 <div class="hero-buttons">
 
-<a
-href="#products"
-class="btn btn-primary">
-
+<a href="#products" class="btn btn-primary">
 Explore Products
-
 </a>
 
-
-<a
-href="#contact"
-class="btn btn-outline">
-
+<a href="#contact" class="btn btn-outline">
 Request a Quote
-
 </a>
 
 </div>
@@ -2278,84 +1531,57 @@ Request a Quote
 </section>
 
 
-
-<!-- =========================================================
-     TRUST BAR
-========================================================= -->
+<!-- ================= TRUST BAR ================= -->
 
 <div class="trust-bar">
 
 <div class="container trust-grid">
 
-
 <div class="trust-item">
 
-<strong>
-OEM Manufacturing
-</strong>
+<strong>OEM Manufacturing</strong>
 
-<span>
-Built to your specifications
-</span>
+<span>Built to your specifications</span>
 
 </div>
 
 
 <div class="trust-item">
 
-<strong>
-Private Label
-</strong>
+<strong>Private Label</strong>
 
-<span>
-Your brand, your identity
-</span>
+<span>Your brand, your identity</span>
 
 </div>
 
 
 <div class="trust-item">
 
-<strong>
-Quality Focus
-</strong>
+<strong>Quality Focus</strong>
 
-<span>
-Production & QC attention
-</span>
+<span>Production & QC attention</span>
 
 </div>
 
 
 <div class="trust-item">
 
-<strong>
-Global Supply
-</strong>
+<strong>Global Supply</strong>
 
-<span>
-International order support
-</span>
+<span>International order support</span>
 
 </div>
-
 
 </div>
 
 </div>
 
 
+<!-- ================= ABOUT ================= -->
 
-<!-- =========================================================
-     ABOUT
-========================================================= -->
-
-<section
-class="about"
-id="about">
+<section class="about" id="about">
 
 <div class="container about-grid">
-
 
 <div class="about-image reveal">
 
@@ -2363,16 +1589,11 @@ id="about">
 src="images/manufacturing/manufacturing-01.jpeg"
 alt="Prior Mark Industries Manufacturing">
 
-
 <div class="about-badge">
 
-<strong>
-OEM
-</strong>
+<strong>OEM</strong>
 
-<span>
-Private Label Manufacturing
-</span>
+<span>Private Label Manufacturing</span>
 
 </div>
 
@@ -2381,95 +1602,59 @@ Private Label Manufacturing
 
 <div class="about-copy reveal">
 
-
 <div class="section-label">
-
 About Prior Mark
-
 </div>
 
-
 <h2 class="section-title">
-
 Manufacturing Built Around Your Brand
-
 </h2>
 
-
 <p>
-
 Prior Mark Industries is a Pakistan-based manufacturing
 company focused on sports products and custom OEM /
 Private Label production.
-
 </p>
 
-
 <p>
-
 From product development and material selection to
 branding, quality checking and packaging, our goal is
 to provide a clear and professional manufacturing
 experience for our customers.
-
 </p>
 
-
 <p>
-
 We work with businesses looking for customized products
 under their own brand identity.
-
 </p>
 
 
 <div class="check-list">
 
-
 <div class="check">
-
 <span>✓</span>
-
 OEM & Private Label
-
 </div>
 
-
 <div class="check">
-
 <span>✓</span>
-
 Custom Logo & Branding
-
 </div>
 
-
 <div class="check">
-
 <span>✓</span>
-
 Product Customization
-
 </div>
 
-
 <div class="check">
-
 <span>✓</span>
-
 Quality Control Focus
-
 </div>
-
 
 <div class="check">
-
 <span>✓</span>
-
 Worldwide Shipping Support
-
 </div>
-
 
 </div>
 
@@ -2480,17 +1665,11 @@ Worldwide Shipping Support
 </section>
 
 
+<!-- ================= PRODUCTS ================= -->
 
-<!-- =========================================================
-     PRODUCTS
-========================================================= -->
-
-<section
-class="products"
-id="products">
+<section class="products" id="products">
 
 <div class="container">
-
 
 <div class="section-head reveal">
 
@@ -2498,33 +1677,27 @@ id="products">
 Our Products
 </div>
 
-
 <h2 class="section-title">
-
 Sports Products Manufactured for Your Brand
-
 </h2>
 
-
 <p class="section-text">
-
 Explore our product categories. Click any category to
 open its product collection and view more manufacturing
 examples.
-
 </p>
 
 </div>
 
 
-
 <div class="products-grid">
 
+
+<!-- GK GLOVES -->
 
 <div
 class="product-card reveal"
 onclick="openGallery('gk')">
-
 
 <div class="product-image">
 
@@ -2536,32 +1709,24 @@ alt="Goalkeeper Gloves">
 
 </div>
 
-
 <div class="product-content">
 
 <small>
 Product Category 01
 </small>
 
-
 <h3>
 Goalkeeper Gloves
 </h3>
 
-
 <p>
-
 Professional goalkeeper gloves with customizable
 latex, cuts, backhand construction, wrist systems
 and branding.
-
 </p>
 
-
 <span class="view-folder">
-
 VIEW COLLECTION →
-
 </span>
 
 </div>
@@ -2569,11 +1734,11 @@ VIEW COLLECTION →
 </div>
 
 
+<!-- FOOTBALLS -->
 
 <div
 class="product-card reveal"
 onclick="openGallery('football')">
-
 
 <div class="product-image">
 
@@ -2585,31 +1750,23 @@ alt="Football Manufacturing">
 
 </div>
 
-
 <div class="product-content">
 
 <small>
 Product Category 02
 </small>
 
-
 <h3>
 Footballs
 </h3>
 
-
 <p>
-
 Custom football manufacturing for brands, clubs,
 academies, retailers and promotional programs.
-
 </p>
 
-
 <span class="view-folder">
-
 VIEW COLLECTION →
-
 </span>
 
 </div>
@@ -2617,11 +1774,11 @@ VIEW COLLECTION →
 </div>
 
 
+<!-- SPORTSWEAR -->
 
 <div
 class="product-card reveal"
 onclick="openGallery('sportswear')">
-
 
 <div class="product-image">
 
@@ -2633,38 +1790,29 @@ alt="Sportswear Manufacturing">
 
 </div>
 
-
 <div class="product-content">
 
 <small>
 Product Category 03
 </small>
 
-
 <h3>
 Sportswear
 </h3>
 
-
 <p>
-
 Custom hoodies, tracksuits, T-shirts and teamwear
 made according to your designs and branding
 requirements.
-
 </p>
 
-
 <span class="view-folder">
-
 VIEW COLLECTION →
-
 </span>
 
 </div>
 
 </div>
-
 
 </div>
 
@@ -2673,17 +1821,11 @@ VIEW COLLECTION →
 </section>
 
 
+<!-- ================= CAPABILITIES ================= -->
 
-<!-- =========================================================
-     CAPABILITIES
-========================================================= -->
-
-<section
-class="capabilities"
-id="capabilities">
+<section class="capabilities" id="capabilities">
 
 <div class="container">
-
 
 <div class="section-head reveal">
 
@@ -2691,113 +1833,77 @@ id="capabilities">
 Manufacturing Capabilities
 </div>
 
-
 <h2 class="section-title">
-
 From Product Concept to Finished Order
-
 </h2>
 
-
 <p class="section-text">
-
 Our manufacturing approach is designed to support
 brands through customization, production, quality
 checking and final packaging.
-
 </p>
 
 </div>
-
 
 
 <div class="capabilities-grid">
 
-
 <div class="capability reveal">
 
-<div class="capability-number">
-01
-</div>
+<div class="capability-number">01</div>
 
-<h3>
-Goalkeeper Gloves
-</h3>
+<h3>Goalkeeper Gloves</h3>
 
 <p>
-
 Premium latex options, negative cut, rolled thumb,
 custom backhand construction, wrist systems,
 colors, logos and packaging.
-
 </p>
 
 </div>
 
 
-
 <div class="capability reveal">
 
-<div class="capability-number">
-02
-</div>
+<div class="capability-number">02</div>
 
-<h3>
-Football Manufacturing
-</h3>
+<h3>Football Manufacturing</h3>
 
 <p>
-
 Custom football designs with your colors, graphics,
 branding and specifications for different applications.
-
 </p>
 
 </div>
 
 
-
 <div class="capability reveal">
 
-<div class="capability-number">
-03
-</div>
+<div class="capability-number">03</div>
 
-<h3>
-Sportswear
-</h3>
+<h3>Sportswear</h3>
 
 <p>
-
 Hoodies, tracksuits, T-shirts and teamwear with
 custom colors, printing, embroidery, labels and
 branding.
-
 </p>
 
 </div>
-
 
 
 <div class="capability reveal">
 
-<div class="capability-number">
-04
-</div>
+<div class="capability-number">04</div>
 
-<h3>
-Custom Branding
-</h3>
+<h3>Custom Branding</h3>
 
 <p>
-
 Customer logos, labels, packaging, product colors
 and visual identity can be developed around your brand.
-
 </p>
 
 </div>
-
 
 </div>
 
@@ -2806,22 +1912,17 @@ and visual identity can be developed around your brand.
 </section>
 
 
-
-<!-- =========================================================
-     OEM
-========================================================= -->
+<!-- ================= OEM ================= -->
 
 <section class="oem">
 
 <div class="container oem-grid">
-
 
 <div class="reveal">
 
 <div class="section-label">
 OEM & Private Label
 </div>
-
 
 <h2 class="section-title">
 
@@ -2831,32 +1932,23 @@ Your Specifications.
 
 </h2>
 
-
 <p class="section-text">
-
 We support customers who want to launch, expand or
 refresh their own sports product line.
-
 </p>
 
 </div>
 
 
-
 <div class="oem-list reveal">
-
 
 <div class="oem-item">
 
-<div class="number">
-01
-</div>
+<div class="number">01</div>
 
 <div>
 
-<h4>
-Send Your Requirements
-</h4>
+<h4>Send Your Requirements</h4>
 
 <p>
 Share your design, specifications, colors or reference.
@@ -2867,18 +1959,13 @@ Share your design, specifications, colors or reference.
 </div>
 
 
-
 <div class="oem-item">
 
-<div class="number">
-02
-</div>
+<div class="number">02</div>
 
 <div>
 
-<h4>
-Product Development
-</h4>
+<h4>Product Development</h4>
 
 <p>
 Discuss materials, construction, branding and packaging.
@@ -2889,18 +1976,13 @@ Discuss materials, construction, branding and packaging.
 </div>
 
 
-
 <div class="oem-item">
 
-<div class="number">
-03
-</div>
+<div class="number">03</div>
 
 <div>
 
-<h4>
-Sample & Approval
-</h4>
+<h4>Sample & Approval</h4>
 
 <p>
 Develop samples according to the agreed requirements.
@@ -2911,18 +1993,13 @@ Develop samples according to the agreed requirements.
 </div>
 
 
-
 <div class="oem-item">
 
-<div class="number">
-04
-</div>
+<div class="number">04</div>
 
 <div>
 
-<h4>
-Bulk Production
-</h4>
+<h4>Bulk Production</h4>
 
 <p>
 Proceed with production after confirmation and approval.
@@ -2932,7 +2009,6 @@ Proceed with production after confirmation and approval.
 
 </div>
 
-
 </div>
 
 </div>
@@ -2940,15 +2016,11 @@ Proceed with production after confirmation and approval.
 </section>
 
 
-
-<!-- =========================================================
-     CUSTOMIZATION
-========================================================= -->
+<!-- ================= CUSTOMIZATION ================= -->
 
 <section class="customization">
 
 <div class="container">
-
 
 <div class="section-head reveal">
 
@@ -2956,153 +2028,103 @@ Proceed with production after confirmation and approval.
 Customization
 </div>
 
-
 <h2 class="section-title">
-
 Built Around Your Brand Identity
-
 </h2>
 
-
 <p class="section-text">
-
 Different customers require different specifications.
 Our OEM approach allows products to be customized
 according to the project.
-
 </p>
 
 </div>
-
 
 
 <div class="custom-grid">
 
-
 <div class="custom-box reveal">
 
-<div class="custom-icon">
-01
-</div>
+<div class="custom-icon">01</div>
 
-<h3>
-Logo & Branding
-</h3>
+<h3>Logo & Branding</h3>
 
 <p>
-
 Add your company logo, labels, branding elements
 and custom identity to your products.
-
 </p>
 
 </div>
 
 
-
 <div class="custom-box reveal">
 
-<div class="custom-icon">
-02
-</div>
+<div class="custom-icon">02</div>
 
-<h3>
-Colors & Design
-</h3>
+<h3>Colors & Design</h3>
 
 <p>
-
 Choose product colors, graphic elements and visual
 details according to your brand.
-
 </p>
 
 </div>
 
 
-
 <div class="custom-box reveal">
 
-<div class="custom-icon">
-03
-</div>
+<div class="custom-icon">03</div>
 
-<h3>
-Materials
-</h3>
+<h3>Materials</h3>
 
 <p>
-
 Discuss suitable materials and product construction
 based on the required application.
-
 </p>
 
 </div>
 
 
-
 <div class="custom-box reveal">
 
-<div class="custom-icon">
-04
-</div>
+<div class="custom-icon">04</div>
 
-<h3>
-Product Construction
-</h3>
+<h3>Product Construction</h3>
 
 <p>
-
 Glove cuts, palm options, backhand construction,
 wrist systems and other product details.
-
 </p>
 
 </div>
 
 
-
 <div class="custom-box reveal">
 
-<div class="custom-icon">
-05
-</div>
+<div class="custom-icon">05</div>
 
-<h3>
-Packaging
-</h3>
+<h3>Packaging</h3>
 
 <p>
-
 Custom packaging solutions can be developed to
 support your product presentation.
-
 </p>
 
 </div>
-
 
 
 <div class="custom-box reveal">
 
-<div class="custom-icon">
-06
-</div>
+<div class="custom-icon">06</div>
 
-<h3>
-Size & Quantity
-</h3>
+<h3>Size & Quantity</h3>
 
 <p>
-
 Production can be planned according to required
 sizes, color combinations and order quantities.
-
 </p>
 
 </div>
-
 
 </div>
 
@@ -3111,17 +2133,11 @@ sizes, color combinations and order quantities.
 </section>
 
 
+<!-- ================= PROCESS ================= -->
 
-<!-- =========================================================
-     PROCESS
-========================================================= -->
-
-<section
-class="process"
-id="process">
+<section class="process" id="process">
 
 <div class="container">
-
 
 <div class="section-head reveal">
 
@@ -3129,27 +2145,19 @@ id="process">
 Manufacturing Process
 </div>
 
-
 <h2 class="section-title">
-
 A Clear Process From Inquiry to Delivery
-
 </h2>
 
-
 <p class="section-text">
-
 We aim to keep communication clear at every stage
 of your manufacturing project.
-
 </p>
 
 </div>
 
 
-
 <div class="process-grid">
-
 
 <div class="process-step reveal">
 
@@ -3157,19 +2165,14 @@ of your manufacturing project.
 STEP 01
 </div>
 
-<h3>
-Inquiry
-</h3>
+<h3>Inquiry</h3>
 
 <p>
-
 Send your product requirements, quantity, target
 market and branding details.
-
 </p>
 
 </div>
-
 
 
 <div class="process-step reveal">
@@ -3178,19 +2181,14 @@ market and branding details.
 STEP 02
 </div>
 
-<h3>
-Development
-</h3>
+<h3>Development</h3>
 
 <p>
-
 Discuss materials, design, construction, colors
 and custom specifications.
-
 </p>
 
 </div>
-
 
 
 <div class="process-step reveal">
@@ -3199,19 +2197,14 @@ and custom specifications.
 STEP 03
 </div>
 
-<h3>
-Sampling
-</h3>
+<h3>Sampling</h3>
 
 <p>
-
 Develop and review samples before moving toward
 bulk production.
-
 </p>
 
 </div>
-
 
 
 <div class="process-step reveal">
@@ -3220,19 +2213,14 @@ bulk production.
 STEP 04
 </div>
 
-<h3>
-Production & Delivery
-</h3>
+<h3>Production & Delivery</h3>
 
 <p>
-
 Complete production, quality checks, packing and
 shipping arrangements.
-
 </p>
 
 </div>
-
 
 </div>
 
@@ -3241,15 +2229,11 @@ shipping arrangements.
 </section>
 
 
-
-<!-- =========================================================
-     QUALITY
-========================================================= -->
+<!-- ================= QUALITY ================= -->
 
 <section class="quality">
 
 <div class="container">
-
 
 <div class="section-head reveal">
 
@@ -3257,95 +2241,67 @@ shipping arrangements.
 Quality Focus
 </div>
 
-
 <h2 class="section-title">
-
 Quality, Communication & Consistency
-
 </h2>
 
-
 <p class="section-text">
-
 We understand that private label customers depend
 on consistent product quality and clear communication.
-
 </p>
 
 </div>
-
 
 
 <div class="quality-grid">
 
-
 <div class="quality-box reveal">
 
-<h3>
-Material Attention
-</h3>
+<h3>Material Attention</h3>
 
 <p>
-
 Product materials and specifications are discussed
 before production so the manufacturing requirements
 are clearly understood.
-
 </p>
 
 </div>
 
 
-
 <div class="quality-box reveal">
 
-<h3>
-Production Checking
-</h3>
+<h3>Production Checking</h3>
 
 <p>
-
 Production is monitored with attention to product
 appearance, construction and agreed specifications.
-
 </p>
 
 </div>
 
 
-
 <div class="quality-box reveal">
 
-<h3>
-Brand Presentation
-</h3>
+<h3>Brand Presentation</h3>
 
 <p>
-
 Logo placement, colors, labels and packaging are
 treated as important parts of the final product.
-
 </p>
 
 </div>
-
 
 
 <div class="quality-box reveal">
 
-<h3>
-Clear Communication
-</h3>
+<h3>Clear Communication</h3>
 
 <p>
-
 We aim to maintain direct communication with customers
 through development, production and delivery.
-
 </p>
 
 </div>
-
 
 </div>
 
@@ -3354,15 +2310,11 @@ through development, production and delivery.
 </section>
 
 
-
-<!-- =========================================================
-     PACKAGING
-========================================================= -->
+<!-- ================= PACKAGING ================= -->
 
 <section class="packaging">
 
 <div class="container packaging-grid">
-
 
 <div class="packaging-image reveal">
 
@@ -3379,42 +2331,28 @@ alt="Custom Product Packaging">
 Packaging
 </div>
 
-
 <h2 class="section-title">
 Ready for Your Brand
 </h2>
 
-
 <p>
-
 Packaging is an important part of the customer
 experience. We can discuss packaging requirements
 according to the product and your brand identity.
-
 </p>
 
 
 <div class="packaging-points">
 
-<div>
-Custom Product Packaging
-</div>
+<div>Custom Product Packaging</div>
 
-<div>
-Brand Labels & Tags
-</div>
+<div>Brand Labels & Tags</div>
 
-<div>
-Logo & Visual Identity
-</div>
+<div>Logo & Visual Identity</div>
 
-<div>
-Bulk Packing Requirements
-</div>
+<div>Bulk Packing Requirements</div>
 
-<div>
-Export Shipping Preparation
-</div>
+<div>Export Shipping Preparation</div>
 
 </div>
 
@@ -3425,15 +2363,11 @@ Export Shipping Preparation
 </section>
 
 
-
-<!-- =========================================================
-     GLOBAL
-========================================================= -->
+<!-- ================= GLOBAL ================= -->
 
 <section class="global">
 
 <div class="container">
-
 
 <div class="global-box reveal">
 
@@ -3441,30 +2375,19 @@ Export Shipping Preparation
 Global Supply
 </div>
 
-
 <h2>
-
 Manufacturing Support for International Brands
-
 </h2>
 
-
 <p>
-
 Prior Mark Industries is based in Sialkot, Pakistan.
 We work with customers who require customized sports
 products for their own brands, businesses, clubs,
 academies and distribution channels.
-
 </p>
 
-
-<a
-href="#contact"
-class="btn btn-primary">
-
+<a href="#contact" class="btn btn-primary">
 Discuss Your Project
-
 </a>
 
 </div>
@@ -3474,17 +2397,11 @@ Discuss Your Project
 </section>
 
 
+<!-- ================= FAQ ================= -->
 
-<!-- =========================================================
-     FAQ
-========================================================= -->
-
-<section
-class="faq"
-id="faq">
+<section class="faq" id="faq">
 
 <div class="container">
-
 
 <div class="section-head reveal">
 
@@ -3492,15 +2409,11 @@ id="faq">
 Frequently Asked Questions
 </div>
 
-
 <h2 class="section-title">
-
 Common Manufacturing Questions
-
 </h2>
 
 </div>
-
 
 
 <div class="faq-wrap">
@@ -3516,7 +2429,6 @@ Do you manufacture OEM and Private Label products?
 
 </button>
 
-
 <div class="faq-answer">
 
 Yes. We provide OEM and Private Label manufacturing
@@ -3525,7 +2437,6 @@ for goalkeeper gloves, footballs and sportswear.
 </div>
 
 </div>
-
 
 
 <div class="faq-item">
@@ -3538,7 +2449,6 @@ Can I add my own logo and design?
 
 </button>
 
-
 <div class="faq-answer">
 
 Yes. Customer branding, logos, colors and product
@@ -3547,7 +2457,6 @@ requirements can be discussed during development.
 </div>
 
 </div>
-
 
 
 <div class="faq-item">
@@ -3560,7 +2469,6 @@ Can I request a sample before bulk production?
 
 </button>
 
-
 <div class="faq-answer">
 
 Yes. Sample development can be discussed before
@@ -3569,7 +2477,6 @@ proceeding with bulk production.
 </div>
 
 </div>
-
 
 
 <div class="faq-item">
@@ -3582,7 +2489,6 @@ Do you manufacture goalkeeper gloves?
 
 </button>
 
-
 <div class="faq-answer">
 
 Yes. We manufacture customized goalkeeper gloves
@@ -3592,7 +2498,6 @@ branding options.
 </div>
 
 </div>
-
 
 
 <div class="faq-item">
@@ -3605,7 +2510,6 @@ Do you manufacture sportswear?
 
 </button>
 
-
 <div class="faq-answer">
 
 Yes. Our sportswear range includes products such
@@ -3614,7 +2518,6 @@ as hoodies, tracksuits, T-shirts and teamwear.
 </div>
 
 </div>
-
 
 
 <div class="faq-item">
@@ -3627,7 +2530,6 @@ Do you ship internationally?
 
 </button>
 
-
 <div class="faq-answer">
 
 International shipping arrangements can be discussed
@@ -3637,7 +2539,6 @@ according to the destination, product and order size.
 
 </div>
 
-
 </div>
 
 </div>
@@ -3645,48 +2546,35 @@ according to the destination, product and order size.
 </section>
 
 
+<!-- ================= CONTACT ================= -->
 
-<!-- =========================================================
-     CONTACT
-========================================================= -->
-
-<section
-class="contact"
-id="contact">
+<section class="contact" id="contact">
 
 <div class="container contact-grid">
 
 
 <div class="contact-info reveal">
 
-
 <div class="section-label">
 Contact Prior Mark
 </div>
-
 
 <h2>
 Let's Build Your Product.
 </h2>
 
-
 <p>
-
 Have a product idea, private label project or bulk
 manufacturing requirement? Send us your requirements
 and our team can discuss the next steps.
-
 </p>
 
 
 <div class="contact-details">
 
-
 <div class="contact-detail">
 
-<small>
-Email
-</small>
+<small>Email</small>
 
 <strong>
 priormarkindustries@gmail.com
@@ -3697,9 +2585,7 @@ priormarkindustries@gmail.com
 
 <div class="contact-detail">
 
-<small>
-WhatsApp
-</small>
+<small>WhatsApp</small>
 
 <strong>
 +92 349 6078457
@@ -3710,9 +2596,7 @@ WhatsApp
 
 <div class="contact-detail">
 
-<small>
-Location
-</small>
+<small>Location</small>
 
 <strong>
 Sialkot, Pakistan
@@ -3723,9 +2607,7 @@ Sialkot, Pakistan
 
 <div class="contact-detail">
 
-<small>
-Business
-</small>
+<small>Business</small>
 
 <strong>
 OEM & Private Label Sports Manufacturing
@@ -3733,27 +2615,21 @@ OEM & Private Label Sports Manufacturing
 
 </div>
 
-
 </div>
 
 </div>
-
 
 
 <div class="contact-form reveal">
-
 
 <form onsubmit="sendInquiry(event)">
 
 
 <div class="form-row">
 
-
 <div class="form-group">
 
-<label>
-Your Name
-</label>
+<label>Your Name</label>
 
 <input
 type="text"
@@ -3764,12 +2640,9 @@ required>
 </div>
 
 
-
 <div class="form-group">
 
-<label>
-Company
-</label>
+<label>Company</label>
 
 <input
 type="text"
@@ -3778,16 +2651,12 @@ placeholder="Company name">
 
 </div>
 
-
 </div>
-
 
 
 <div class="form-group">
 
-<label>
-Email
-</label>
+<label>Email</label>
 
 <input
 type="email"
@@ -3798,42 +2667,28 @@ required>
 </div>
 
 
-
 <div class="form-group">
 
-<label>
-Product
-</label>
+<label>Product</label>
 
 <select id="product">
 
-<option>
-Goalkeeper Gloves
-</option>
+<option>Goalkeeper Gloves</option>
 
-<option>
-Footballs
-</option>
+<option>Footballs</option>
 
-<option>
-Sportswear
-</option>
+<option>Sportswear</option>
 
-<option>
-Other
-</option>
+<option>Other</option>
 
 </select>
 
 </div>
 
 
-
 <div class="form-group">
 
-<label>
-Message
-</label>
+<label>Message</label>
 
 <textarea
 id="message"
@@ -3841,7 +2696,6 @@ placeholder="Tell us about your product, quantity, specifications and destinatio
 required></textarea>
 
 </div>
-
 
 
 <button
@@ -3852,7 +2706,6 @@ Send Manufacturing Inquiry
 
 </button>
 
-
 </form>
 
 </div>
@@ -3862,10 +2715,7 @@ Send Manufacturing Inquiry
 </section>
 
 
-
-<!-- =========================================================
-     FOOTER
-========================================================= -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
@@ -3875,142 +2725,84 @@ Send Manufacturing Inquiry
 <div class="footer-grid">
 
 
-<!-- BRAND -->
-
 <div class="footer-brand">
 
-
-<a
-href="#home"
-class="logo">
+<a href="#home" class="logo">
 
 <div class="logo-mark">
 PM
 </div>
 
-
 <div class="logo-text">
 
-<strong>
-PRIOR MARK
-</strong>
+<strong>PRIOR MARK</strong>
 
-<span>
-INDUSTRIES
-</span>
+<span>INDUSTRIES</span>
 
 </div>
 
 </a>
 
-
 <p>
-
 OEM & Private Label manufacturing for goalkeeper
 gloves, footballs and sportswear from Sialkot, Pakistan.
-
 </p>
 
 </div>
 
 
-
-<!-- COMPANY -->
-
 <div class="footer-col">
 
-<h4>
-Company
-</h4>
+<h4>Company</h4>
 
-<a href="#about">
-About
-</a>
+<a href="#about">About</a>
 
-<a href="#products">
-Products
-</a>
+<a href="#products">Products</a>
 
-<a href="#capabilities">
-Capabilities
-</a>
+<a href="#capabilities">Capabilities</a>
 
-<a href="#process">
-Manufacturing Process
-</a>
+<a href="#process">Manufacturing Process</a>
 
 </div>
 
 
-
-<!-- PRODUCTS -->
-
 <div class="footer-col">
 
-<h4>
-Products
-</h4>
+<h4>Products</h4>
 
-<a href="#products">
-Goalkeeper Gloves
-</a>
+<a href="#products">Goalkeeper Gloves</a>
 
-<a href="#products">
-Footballs
-</a>
+<a href="#products">Footballs</a>
 
-<a href="#products">
-Sportswear
-</a>
+<a href="#products">Sportswear</a>
 
-<a href="#contact">
-OEM Manufacturing
-</a>
+<a href="#contact">OEM Manufacturing</a>
 
 </div>
 
 
-
-<!-- CONTACT -->
-
 <div class="footer-col">
 
-<h4>
-Contact
-</h4>
+<h4>Contact</h4>
 
 <a href="mailto:priormarkindustries@gmail.com">
-
 Email Us
-
 </a>
-
 
 <a
 href="https://wa.me/923496078457"
 target="_blank">
-
 WhatsApp
-
 </a>
-
 
 <a href="#contact">
-
 Request a Quote
-
 </a>
 
 </div>
 
-
 </div>
 
-
-
-<!-- =====================================================
-     SMALL SOCIAL LINKS - FOOTER ONLY
-===================================================== -->
 
 <div class="footer-social">
 
@@ -4018,117 +2810,83 @@ Request a Quote
 <a
 href="https://www.instagram.com/priormarkindustries/"
 target="_blank"
-rel="noopener"
-aria-label="Instagram">
+rel="noopener">
 
 <i class="fa-brands fa-instagram"></i>
 
-<span>
-Instagram
-</span>
+<span>Instagram</span>
 
 </a>
-
 
 
 <a
 href="https://web.facebook.com/priormarkindustries"
 target="_blank"
-rel="noopener"
-aria-label="Facebook">
+rel="noopener">
 
 <i class="fa-brands fa-facebook-f"></i>
 
-<span>
-Facebook
-</span>
+<span>Facebook</span>
 
 </a>
-
 
 
 <a
 href="https://www.youtube.com/@PriorMarkIndustries"
 target="_blank"
-rel="noopener"
-aria-label="YouTube">
+rel="noopener">
 
 <i class="fa-brands fa-youtube"></i>
 
-<span>
-YouTube
-</span>
+<span>YouTube</span>
 
 </a>
-
 
 
 <a
 href="https://www.tiktok.com/@priormarkindustries"
 target="_blank"
-rel="noopener"
-aria-label="TikTok">
+rel="noopener">
 
 <i class="fa-brands fa-tiktok"></i>
 
-<span>
-TikTok
-</span>
+<span>TikTok</span>
 
 </a>
-
 
 
 <a
 href="https://wa.me/923496078457"
 target="_blank"
-rel="noopener"
-aria-label="WhatsApp">
+rel="noopener">
 
 <i class="fa-brands fa-whatsapp"></i>
 
-<span>
-WhatsApp
-</span>
+<span>WhatsApp</span>
 
 </a>
 
-
 </div>
 
-
-
-<!-- FOOTER BOTTOM -->
 
 <div class="footer-bottom">
 
-
 <span>
-
 © 2026 Prior Mark Industries. All Rights Reserved.
-
 </span>
-
 
 <span>
-
 Sialkot, Pakistan · OEM & Private Label Manufacturing
-
 </span>
-
 
 </div>
-
 
 </div>
 
 </footer>
 
 
-
-<!-- =========================================================
-     FLOATING WHATSAPP
-========================================================= -->
+<!-- ================= FLOATING WHATSAPP ================= -->
 
 <a
 class="whatsapp"
@@ -4141,18 +2899,13 @@ aria-label="WhatsApp">
 </a>
 
 
-
-<!-- =========================================================
-     GALLERY MODAL
-========================================================= -->
+<!-- ================= GALLERY MODAL ================= -->
 
 <div
 class="gallery-modal"
 id="galleryModal">
 
-
 <div class="gallery-header">
-
 
 <div>
 
@@ -4166,7 +2919,6 @@ Explore our manufacturing collection.
 
 </div>
 
-
 <button
 class="gallery-close"
 onclick="closeGallery()">
@@ -4175,29 +2927,22 @@ onclick="closeGallery()">
 
 </button>
 
-
 </div>
 
 
 <div
 class="gallery-grid"
 id="galleryGrid">
+</div>
 
 </div>
 
 
-</div>
-
-
-
-<!-- =========================================================
-     LIGHTBOX
-========================================================= -->
+<!-- ================= LIGHTBOX ================= -->
 
 <div
 class="lightbox"
 id="lightbox">
-
 
 <button
 class="lightbox-close"
@@ -4231,17 +2976,13 @@ onclick="nextImage()">
 
 </button>
 
-
 </div>
-
 
 
 <script>
 
 
-/* =========================================================
-   MOBILE MENU
-========================================================= */
+/* ================= MOBILE MENU ================= */
 
 function toggleMenu(){
 
@@ -4267,13 +3008,12 @@ document
 });
 
 
-
-/* =========================================================
-   GALLERY DATA
-========================================================= */
+/* ================= GALLERY DATA ================= */
 
 const galleries = {
 
+
+    /* GK GLOVES - 7 IMAGES */
 
     gk: {
 
@@ -4294,12 +3034,16 @@ const galleries = {
 
             "images/gk-gloves/gk-gloves-05.jpeg",
 
-            "images/gk-gloves/gk-gloves-06.jpeg"
+            "images/gk-gloves/gk-gloves-06.jpeg",
+
+            "images/gk-gloves/gk-gloves-07.jpeg"
 
         ]
 
     },
 
+
+    /* FOOTBALLS */
 
     football: {
 
@@ -4324,6 +3068,8 @@ const galleries = {
 
     },
 
+
+    /* SPORTSWEAR */
 
     sportswear: {
 
@@ -4351,16 +3097,12 @@ const galleries = {
 };
 
 
-
 let currentGallery = [];
 
 let currentIndex = 0;
 
 
-
-/* =========================================================
-   OPEN GALLERY
-========================================================= */
+/* ================= OPEN GALLERY ================= */
 
 function openGallery(type){
 
@@ -4387,7 +3129,6 @@ function openGallery(type){
 
 
     gallery.images.forEach((image,index) => {
-
 
         const item =
             document.createElement("div");
@@ -4416,7 +3157,6 @@ function openGallery(type){
 
         grid.appendChild(item);
 
-
     });
 
 
@@ -4430,10 +3170,7 @@ function openGallery(type){
 }
 
 
-
-/* =========================================================
-   CLOSE GALLERY
-========================================================= */
+/* ================= CLOSE GALLERY ================= */
 
 function closeGallery(){
 
@@ -4447,10 +3184,7 @@ function closeGallery(){
 }
 
 
-
-/* =========================================================
-   LIGHTBOX
-========================================================= */
+/* ================= LIGHTBOX ================= */
 
 function openLightbox(index){
 
@@ -4470,7 +3204,6 @@ function openLightbox(index){
 }
 
 
-
 function closeLightbox(){
 
     document
@@ -4478,7 +3211,6 @@ function closeLightbox(){
     .classList.remove("active");
 
 }
-
 
 
 function nextImage(){
@@ -4503,7 +3235,6 @@ function nextImage(){
 }
 
 
-
 function previousImage(){
 
     currentIndex--;
@@ -4525,13 +3256,9 @@ function previousImage(){
 }
 
 
-
-/* =========================================================
-   KEYBOARD CONTROLS
-========================================================= */
+/* ================= KEYBOARD ================= */
 
 document.addEventListener("keydown",function(e){
-
 
     if(e.key === "Escape"){
 
@@ -4545,12 +3272,10 @@ document.addEventListener("keydown",function(e){
     if(e.key === "ArrowRight"){
 
         if(
-
             document
             .getElementById("lightbox")
             .classList
             .contains("active")
-
         ){
 
             nextImage();
@@ -4563,12 +3288,10 @@ document.addEventListener("keydown",function(e){
     if(e.key === "ArrowLeft"){
 
         if(
-
             document
             .getElementById("lightbox")
             .classList
             .contains("active")
-
         ){
 
             previousImage();
@@ -4580,18 +3303,13 @@ document.addEventListener("keydown",function(e){
 });
 
 
-
-/* =========================================================
-   FAQ
-========================================================= */
+/* ================= FAQ ================= */
 
 document
 .querySelectorAll(".faq-question")
 .forEach(button => {
 
-
     button.addEventListener("click",() => {
-
 
         const item =
             button.parentElement;
@@ -4612,16 +3330,12 @@ document
 
             : "+";
 
-
     });
 
 });
 
 
-
-/* =========================================================
-   CONTACT FORM
-========================================================= */
+/* ================= CONTACT FORM ================= */
 
 function sendInquiry(event){
 
@@ -4695,10 +3409,7 @@ function sendInquiry(event){
 }
 
 
-
-/* =========================================================
-   SCROLL REVEAL
-========================================================= */
+/* ================= SCROLL REVEAL ================= */
 
 const revealElements =
     document.querySelectorAll(".reveal");
@@ -4709,12 +3420,9 @@ const observer =
 
         entries => {
 
-
             entries.forEach(entry => {
 
-
                 if(entry.isIntersecting){
-
 
                     entry.target
                     .classList
@@ -4729,7 +3437,6 @@ const observer =
                 }
 
             });
-
 
         },
 
@@ -4747,15 +3454,11 @@ revealElements.forEach(element => {
 });
 
 
-
-/* =========================================================
-   CLOSE GALLERY BY BACKGROUND
-========================================================= */
+/* ================= CLOSE GALLERY BY BACKGROUND ================= */
 
 document
 .getElementById("galleryModal")
 .addEventListener("click",function(e){
-
 
     if(e.target === this){
 
@@ -4766,15 +3469,11 @@ document
 });
 
 
-
-/* =========================================================
-   CLOSE LIGHTBOX BY BACKGROUND
-========================================================= */
+/* ================= CLOSE LIGHTBOX BY BACKGROUND ================= */
 
 document
 .getElementById("lightbox")
 .addEventListener("click",function(e){
-
 
     if(e.target === this){
 
@@ -4783,7 +3482,6 @@ document
     }
 
 });
-
 
 </script>
 
