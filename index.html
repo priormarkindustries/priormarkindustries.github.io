@@ -1,141 +1,227 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#0a101a">
-  <meta name="description" content="Prior Mark Industries, Sialkot Pakistan. OEM and private-label goalkeeper gloves, footballs and sportswear with custom branding.">
+
+  <meta name="description" content="Prior Mark Industries is a Sialkot, Pakistan-based sports products manufacturer specializing in goalkeeper gloves, footballs, sportswear, OEM and private-label manufacturing.">
+
+  <meta name="keywords" content="Prior Mark Industries, goalkeeper gloves manufacturer, GK gloves, football manufacturer, sportswear manufacturer, OEM, private label, Sialkot Pakistan">
+
+  <meta name="author" content="Prior Mark Industries">
+
   <title>Prior Mark Industries | Sports Manufacturing & Private Label</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
   <style>
     :root {
-      --bg: #080e17;
-      --panel: #101a29;
-      --panel2: #142237;
-      --text: #edf4ff;
-      --muted: #a7b5c9;
-      --accent: #a8f05a;
-      --blue: #65b2ff;
-      --border: rgba(255,255,255,.12);
+      --bg: #080d16;
+      --bg-light: #0d1522;
+      --card: #111c2b;
+      --lime: #c8ff45;
+      --white: #ffffff;
+      --muted: #a6b1c2;
+      --border: rgba(255,255,255,0.10);
       --radius: 18px;
+      --max-width: 1200px;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
 
     body {
+      font-family: "Inter", sans-serif;
       background: var(--bg);
-      color: var(--text);
-      font-family: Arial, Helvetica, sans-serif;
+      color: var(--white);
       line-height: 1.7;
+      overflow-x: hidden;
     }
 
-    a { color: inherit; text-decoration: none; }
-
-    img { display: block; max-width: 100%; }
-
-    button, input, select, textarea { font: inherit; }
-
-    .wrap { width: min(1160px, 92%); margin: auto; }
-
-    .accent { color: var(--accent); }
-
-    .muted { color: var(--muted); }
-
-    .eyebrow {
-      color: var(--accent);
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 2px;
-      text-transform: uppercase;
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
-    .section { padding: 82px 0; }
+    img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    button, input, select, textarea {
+      font: inherit;
+    }
+
+    .container {
+      width: min(92%, var(--max-width));
+      margin: auto;
+    }
+
+    .section {
+      padding: 95px 0;
+    }
 
     .section-heading {
-      max-width: 720px;
-      margin-bottom: 35px;
+      max-width: 740px;
+      margin-bottom: 42px;
     }
 
-    h1, h2, h3 { line-height: 1.15; }
+    .eyebrow {
+      display: inline-block;
+      color: var(--lime);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      margin-bottom: 14px;
+    }
+
+    h1, h2, h3, h4 {
+      line-height: 1.2;
+      letter-spacing: -0.7px;
+    }
 
     h2 {
-      font-size: clamp(28px, 4vw, 43px);
-      margin: 12px 0 18px;
-      letter-spacing: -1px;
+      font-size: clamp(30px, 4vw, 46px);
+      margin-bottom: 18px;
     }
 
-    h3 { font-size: 20px; margin-bottom: 12px; }
+    .section-heading p,
+    .muted {
+      color: var(--muted);
+    }
 
-    p { color: var(--muted); }
-
-    .lead { font-size: 17px; max-width: 700px; }
+    .highlight {
+      color: var(--lime);
+    }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      padding: 13px 20px;
-      border: 1px solid var(--border);
+      gap: 10px;
+      padding: 14px 23px;
+      border: 1px solid transparent;
       border-radius: 8px;
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 800;
-      transition: .2s;
       cursor: pointer;
+      transition: 0.25s ease;
     }
 
     .btn-primary {
-      color: #10170b;
-      background: var(--accent);
-      border-color: var(--accent);
+      background: var(--lime);
+      color: #101609;
     }
 
-    .btn-primary:hover { background: #c0ff82; transform: translateY(-2px); }
+    .btn-primary:hover {
+      background: #e0ff9b;
+      transform: translateY(-2px);
+    }
 
-    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+    .btn-outline {
+      border-color: rgba(255,255,255,0.25);
+      color: var(--white);
+      background: transparent;
+    }
 
-    /* HEADER */
+    .btn-outline:hover {
+      border-color: var(--lime);
+      color: var(--lime);
+    }
 
-    header {
+    /* Navigation */
+
+    .navbar {
       position: sticky;
       top: 0;
-      z-index: 100;
-      background: rgba(8,14,23,.94);
-      backdrop-filter: blur(14px);
+      z-index: 1000;
+      background: rgba(8,13,22,0.94);
       border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(15px);
     }
 
-    .nav {
+    .nav-inner {
       min-height: 78px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 22px;
+      gap: 20px;
     }
 
-    .brand { display: flex; align-items: center; gap: 12px; }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
 
-    .brand-symbol {
+    .brand-mark {
       display: grid;
       place-items: center;
-      width: 43px;
-      height: 43px;
-      border: 1px solid var(--accent);
-      border-radius: 12px;
-      color: var(--accent);
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--lime);
+      color: #0a101a;
+      font-size: 20px;
       font-weight: 900;
-      font-size: 22px;
+      flex-shrink: 0;
     }
 
-    .brand-name { display: block; font-size: 17px; font-weight: 900; letter-spacing: 1px; }
-    .brand-sub { display: block; font-size: 9px; color: var(--muted); letter-spacing: 2px; }
+    .brand-name {
+      font-size: 15px;
+      font-weight: 900;
+      line-height: 1.25;
+      letter-spacing: 0.5px;
+    }
 
-    .nav-links { display: flex; align-items: center; gap: 21px; }
-    .nav-links a { font-size: 12px; font-weight: 700; color: var(--muted); }
-    .nav-links a:hover { color: var(--accent); }
+    .brand-subtitle {
+      display: block;
+      font-size: 10px;
+      color: var(--muted);
+      letter-spacing: 2px;
+      margin-top: 4px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 23px;
+    }
+
+    .nav-links a {
+      color: #d5dce6;
+      font-size: 12px;
+      font-weight: 700;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--lime);
+    }
+
+    .nav-cta {
+      background: var(--lime);
+      color: #0a101a !important;
+      padding: 10px 15px;
+      border-radius: 7px;
+    }
 
     .menu-toggle {
       display: none;
@@ -143,881 +229,1743 @@
       border: 1px solid var(--border);
       color: white;
       border-radius: 8px;
-      padding: 7px 12px;
+      width: 43px;
+      height: 43px;
       cursor: pointer;
+      font-size: 19px;
     }
 
-    /* HERO */
+    /* Hero */
 
     .hero {
-      padding: 76px 0 82px;
+      position: relative;
+      padding: 100px 0 90px;
       background:
-        radial-gradient(ellipse at 80% 20%, rgba(101,178,255,.13), transparent 42%),
-        radial-gradient(ellipse at 10% 90%, rgba(168,240,90,.07), transparent 40%);
+        radial-gradient(ellipse at 85% 20%, rgba(200,255,69,0.10), transparent 38%),
+        linear-gradient(135deg, #080d16 0%, #0c1725 100%);
+      overflow: hidden;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap: 55px;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 60px;
       align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 9px 13px;
+      border: 1px solid rgba(200,255,69,0.3);
+      border-radius: 50px;
+      color: var(--lime);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-bottom: 25px;
     }
 
     .hero h1 {
-      font-size: clamp(42px, 6.5vw, 76px);
-      letter-spacing: -3px;
-      margin: 18px 0 22px;
-      line-height: 1.03;
+      font-size: clamp(40px, 5.5vw, 70px);
+      font-weight: 900;
+      letter-spacing: -2.5px;
+      margin-bottom: 25px;
     }
 
-    .hero p { max-width: 590px; }
-
-    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
-
-    .hero-photo {
-      min-height: 420px;
-      position: relative;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      background: var(--panel);
+    .hero-copy {
+      color: #b5c0ce;
+      font-size: 16px;
+      max-width: 590px;
+      margin-bottom: 30px;
     }
 
-    .hero-photo img {
-      width: 100%;
-      height: 420px;
-      object-fit: cover;
+    .hero-actions {
+      display: flex;
+      gap: 13px;
+      flex-wrap: wrap;
     }
 
-    .photo-caption {
-      position: absolute;
-      left: 18px;
-      right: 18px;
-      bottom: 18px;
-      padding: 17px;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      background: rgba(8,14,23,.88);
-    }
-
-    .photo-caption strong { display: block; }
-    .photo-caption span { color: var(--muted); font-size: 12px; }
-
-    .trust-row {
+    .hero-features {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 30px;
-    }
-
-    .trust-pill {
-      padding: 8px 12px;
-      background: rgba(255,255,255,.04);
-      border: 1px solid var(--border);
-      border-radius: 7px;
-      font-size: 11px;
-      color: #d6e2f2;
-    }
-
-    /* CARDS AND GRIDS */
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
+      margin-top: 35px;
+      color: #dce4ed;
+      font-size: 12px;
+      font-weight: 600;
     }
 
-    .card {
-      background: var(--panel);
+    .hero-features span {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .hero-features i {
+      color: var(--lime);
+    }
+
+    .hero-image-wrap {
+      position: relative;
+      min-width: 0;
+    }
+
+    .hero-image {
+      height: 470px;
+      border-radius: 22px;
       border: 1px solid var(--border);
-      border-radius: var(--radius);
-      overflow: hidden;
-      transition: .25s;
+      background: #111c2b;
+      object-position: center;
     }
 
-    .card:hover { transform: translateY(-5px); border-color: rgba(168,240,90,.45); }
-
-    .card-image {
-      height: 245px;
-      background: #162438;
-      overflow: hidden;
+    .image-label {
+      position: absolute;
+      left: 20px;
+      right: 20px;
+      bottom: 20px;
+      padding: 18px;
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 12px;
+      background: rgba(8,13,22,0.85);
+      backdrop-filter: blur(10px);
     }
 
-    .card-image img { width: 100%; height: 100%; object-fit: cover; }
+    .image-label strong {
+      display: block;
+      font-size: 16px;
+    }
 
-    .card-body { padding: 23px; }
-    .card-body p { font-size: 14px; margin-bottom: 17px; }
-    .text-link { font-size: 12px; color: var(--accent); font-weight: 800; }
+    .image-label span {
+      color: var(--muted);
+      font-size: 12px;
+    }
 
-    .split {
+    /* Trust strip */
+
+    .trust-strip {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: #0b121d;
+    }
+
+    .trust-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .trust-item {
+      padding: 26px 16px;
+      text-align: center;
+      border-right: 1px solid var(--border);
+    }
+
+    .trust-item:last-child {
+      border-right: 0;
+    }
+
+    .trust-item i {
+      color: var(--lime);
+      font-size: 21px;
+      margin-bottom: 9px;
+    }
+
+    .trust-item strong {
+      display: block;
+      font-size: 13px;
+    }
+
+    .trust-item span {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      margin-top: 4px;
+    }
+
+    /* About */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 60px;
       align-items: center;
     }
 
-    .about-photo {
-      min-height: 390px;
-      height: 100%;
+    .about-image {
+      height: 480px;
       border-radius: var(--radius);
-      overflow: hidden;
-      background: var(--panel);
+      background: var(--card);
       border: 1px solid var(--border);
     }
 
-    .about-photo img { width: 100%; height: 100%; min-height: 390px; object-fit: cover; }
-
-    .check-list { list-style: none; margin: 22px 0; }
-    .check-list li { margin: 10px 0; color: #dce7f5; font-size: 14px; }
-    .check-list li::before { content: "✓"; color: var(--accent); font-weight: 900; margin-right: 10px; }
-
-    .dark-band {
-      background: #0d1725;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
+    .about-copy p {
+      color: var(--muted);
+      margin-bottom: 18px;
     }
 
-    .feature-grid {
+    .check-list {
+      list-style: none;
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
+      grid-template-columns: 1fr 1fr;
+      gap: 13px;
+      margin: 26px 0 30px;
     }
 
-    .feature {
-      padding: 22px;
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 12px;
+    .check-list li {
+      font-size: 13px;
+      color: #e4eaf1;
+      display: flex;
+      gap: 9px;
+      align-items: flex-start;
     }
 
-    .feature-number { color: var(--accent); font-size: 12px; font-weight: 900; }
-    .feature h3 { margin-top: 12px; font-size: 17px; }
-    .feature p { font-size: 13px; }
+    .check-list i {
+      color: var(--lime);
+      margin-top: 5px;
+    }
 
-    /* GALLERY */
+    /* Products */
 
-    .gallery-grid {
+    .products-section {
+      background: var(--bg-light);
+    }
+
+    .product-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
+      gap: 22px;
     }
 
-    .gallery-card {
+    .product-card {
       overflow: hidden;
-      background: var(--panel);
+      background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 14px;
-    }
-
-    .gallery-card img {
-      width: 100%;
-      height: 260px;
-      object-fit: cover;
-      cursor: zoom-in;
-      transition: transform .3s;
-    }
-
-    .gallery-card img:hover { transform: scale(1.03); }
-    .gallery-info { padding: 16px; }
-    .gallery-info strong { display: block; margin-bottom: 4px; }
-    .gallery-info p { font-size: 12px; }
-
-    /* CONTACT */
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: .85fr 1.15fr;
-      gap: 35px;
-      align-items: start;
-    }
-
-    .contact-list { display: grid; gap: 12px; margin-top: 25px; }
-
-    .contact-option {
-      display: block;
-      padding: 17px;
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-    }
-
-    .contact-option small { display: block; color: var(--muted); font-size: 11px; }
-    .contact-option strong { display: block; font-size: 14px; overflow-wrap: anywhere; }
-
-    .form-card {
-      padding: 28px;
-      border: 1px solid var(--border);
-      background: var(--panel);
       border-radius: var(--radius);
+      transition: transform 0.25s, border-color 0.25s;
     }
 
-    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .field { display: grid; gap: 7px; }
-    .field.full { grid-column: 1 / -1; }
-    .field label { font-size: 12px; font-weight: 700; }
-
-    .field input, .field select, .field textarea {
-      width: 100%;
-      padding: 12px;
-      background: #09111e;
-      color: var(--text);
-      border: 1px solid var(--border);
-      border-radius: 7px;
-      outline: none;
+    .product-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(200,255,69,0.55);
     }
 
-    .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--accent); }
-    .field textarea { min-height: 125px; resize: vertical; }
-    .form-help { font-size: 11px; margin: 15px 0; }
-
-    /* FOOTER */
-
-    .footer {
-      padding: 55px 0 20px;
-      background: #060a11;
-      border-top: 1px solid var(--border);
+    .product-image-wrap {
+      position: relative;
+      overflow: hidden;
+      background: #172233;
     }
 
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr;
-      gap: 35px;
+    .product-image {
+      height: 275px;
+      transition: transform 0.4s;
     }
 
-    .footer p { font-size: 13px; margin-top: 16px; max-width: 380px; }
-    .footer h4 { margin-bottom: 15px; }
-    .footer-links { display: grid; gap: 9px; }
-    .footer-links a { font-size: 12px; color: var(--muted); }
-    .footer-links a:hover { color: var(--accent); }
+    .product-card:hover .product-image {
+      transform: scale(1.04);
+    }
 
-    .socials { display: flex; gap: 10px; margin-top: 18px; flex-wrap: wrap; }
-    .socials a {
-      width: 36px;
-      height: 36px;
-      display: grid;
-      place-items: center;
-      border: 1px solid var(--border);
-      border-radius: 8px;
+    .product-number {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background: var(--lime);
+      color: #0a101a;
+      padding: 6px 10px;
+      border-radius: 5px;
+      font-size: 10px;
+      font-weight: 900;
+    }
+
+    .product-content {
+      padding: 24px;
+    }
+
+    .product-content h3 {
+      font-size: 21px;
+      margin-bottom: 11px;
+    }
+
+    .product-content p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
+    .text-link {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      color: var(--lime);
       font-size: 12px;
       font-weight: 800;
     }
 
-    .socials a:hover { color: var(--accent); border-color: var(--accent); }
+    /* OEM */
 
-    .footer-bottom {
-      margin-top: 40px;
-      padding-top: 18px;
+    .oem-panel {
+      padding: 50px;
+      border: 1px solid rgba(200,255,69,0.25);
+      border-radius: 24px;
+      background:
+        radial-gradient(circle at 100% 0%, rgba(200,255,69,0.09), transparent 35%),
+        #0e1724;
+    }
+
+    .oem-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .oem-copy p {
+      color: var(--muted);
+      margin-bottom: 25px;
+    }
+
+    .oem-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .oem-feature {
+      padding: 19px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.035);
+      border: 1px solid var(--border);
+    }
+
+    .oem-feature i {
+      font-size: 22px;
+      color: var(--lime);
+      margin-bottom: 12px;
+    }
+
+    .oem-feature h3 {
+      font-size: 14px;
+      margin-bottom: 7px;
+    }
+
+    .oem-feature p {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* Capabilities */
+
+    .capability-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .capability-card {
+      padding: 27px 22px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--bg-light);
+    }
+
+    .capability-card i {
+      display: grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      color: var(--lime);
+      background: rgba(200,255,69,0.09);
+      border-radius: 12px;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .capability-card h3 {
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    .capability-card p {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* Process */
+
+    .process-section {
+      background: var(--bg-light);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .process-card {
+      padding: 26px;
+      border-top: 2px solid var(--lime);
+      background: var(--card);
+      border-radius: 0 0 14px 14px;
+    }
+
+    .process-step {
+      color: var(--lime);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+    }
+
+    .process-card h3 {
+      font-size: 17px;
+      margin-bottom: 10px;
+    }
+
+    .process-card p {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* Gallery */
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--card);
+    }
+
+    .gallery-item img {
+      height: 350px;
+      transition: transform 0.4s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.04);
+    }
+
+    .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 30px 22px 20px;
+      background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    }
+
+    .gallery-caption h3 {
+      font-size: 18px;
+    }
+
+    .gallery-caption p {
+      font-size: 12px;
+      color: #d0d6de;
+    }
+
+    /* Contact */
+
+    .contact-section {
+      background: var(--bg-light);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 45px;
+      align-items: start;
+    }
+
+    .contact-copy p {
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    .contact-detail {
+      display: flex;
+      gap: 15px;
+      align-items: flex-start;
+      margin: 22px 0;
+    }
+
+    .contact-icon {
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      width: 43px;
+      height: 43px;
+      border-radius: 10px;
+      color: var(--lime);
+      background: rgba(200,255,69,0.09);
+    }
+
+    .contact-detail strong {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    .contact-detail a,
+    .contact-detail span {
+      color: var(--muted);
+      font-size: 13px;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-form {
+      padding: 30px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 17px;
+    }
+
+    .form-group {
+      margin-bottom: 17px;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      color: #e4eaf1;
+      margin-bottom: 8px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 13px 14px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: #0b1320;
+      color: white;
+      outline: none;
+      font-size: 13px;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--lime);
+    }
+
+    .form-group select option {
+      background: #0b1320;
+    }
+
+    .form-group textarea {
+      min-height: 125px;
+      resize: vertical;
+    }
+
+    .form-note {
+      color: var(--muted);
+      font-size: 11px;
+      margin-top: 13px;
+    }
+
+    /* CTA */
+
+    .cta-section {
+      padding: 75px 0;
+    }
+
+    .cta-box {
+      padding: 48px 35px;
+      text-align: center;
+      border-radius: 22px;
+      background: var(--lime);
+      color: #101609;
+    }
+
+    .cta-box h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      margin-bottom: 14px;
+    }
+
+    .cta-box p {
+      max-width: 650px;
+      margin: 0 auto 25px;
+      color: #334020;
+    }
+
+    .btn-dark {
+      background: #101609;
+      color: white;
+    }
+
+    .btn-dark:hover {
+      background: #243019;
+      transform: translateY(-2px);
+    }
+
+    /* Footer */
+
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 55px 0 25px;
+      background: #060a11;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr 1fr;
+      gap: 45px;
+      margin-bottom: 40px;
+    }
+
+    .footer-about p {
+      color: var(--muted);
+      font-size: 12px;
+      max-width: 350px;
+      margin-top: 17px;
+    }
+
+    .footer h3 {
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .footer-links a:hover {
+      color: var(--lime);
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .social-links a {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      color: #d9e0e8;
+      transition: 0.2s;
+    }
+
+    .social-links a:hover {
+      color: var(--lime);
+      border-color: var(--lime);
+    }
+
+    .copyright {
+      padding-top: 23px;
       border-top: 1px solid var(--border);
       display: flex;
       justify-content: space-between;
       gap: 15px;
-      flex-wrap: wrap;
+      color: #7f8a9a;
       font-size: 11px;
-      color: var(--muted);
     }
 
-    /* IMAGE VIEWER */
+    /* Floating WhatsApp */
 
-    .lightbox {
-      display: none;
+    .whatsapp-float {
       position: fixed;
-      inset: 0;
-      z-index: 300;
-      background: rgba(0,0,0,.9);
-      padding: 25px;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .lightbox.open { display: flex; }
-
-    .lightbox img {
-      max-width: min(100%, 1000px);
-      max-height: 85vh;
-      object-fit: contain;
-      border-radius: 10px;
-    }
-
-    .lightbox-close {
-      position: absolute;
-      top: 18px;
-      right: 24px;
+      z-index: 999;
+      right: 22px;
+      bottom: 22px;
+      display: grid;
+      place-items: center;
+      width: 58px;
+      height: 58px;
+      background: #25d366;
       color: white;
-      background: #172234;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      font-size: 25px;
-      width: 44px;
-      height: 44px;
-      cursor: pointer;
+      border-radius: 50%;
+      font-size: 29px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+      transition: transform 0.2s;
     }
 
-    /* RESPONSIVE */
-
-    @media (max-width: 900px) {
-      .hero-grid, .split, .contact-grid { grid-template-columns: 1fr; }
-      .hero-photo { min-height: 330px; }
-      .hero-photo img { height: 390px; }
-      .cards { grid-template-columns: repeat(2, 1fr); }
-      .feature-grid { grid-template-columns: repeat(2, 1fr); }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
+    .whatsapp-float:hover {
+      transform: scale(1.08);
     }
 
-    @media (max-width: 680px) {
-      .nav { min-height: 68px; }
-      .menu-toggle { display: block; }
+    /* Responsive */
+
+    @media (max-width: 1000px) {
+      .nav-links {
+        gap: 14px;
+      }
+
+      .nav-links a {
+        font-size: 11px;
+      }
+
+      .hero-grid {
+        gap: 35px;
+      }
+
+      .capability-grid,
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-grid {
+        gap: 35px;
+      }
+    }
+
+    @media (max-width: 780px) {
+      .section {
+        padding: 70px 0;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-inner {
+        min-height: 70px;
+      }
+
       .nav-links {
         display: none;
         position: absolute;
+        top: 70px;
         left: 0;
         right: 0;
-        top: 68px;
-        padding: 20px 4%;
+        padding: 22px 5%;
         background: #0a101a;
         border-bottom: 1px solid var(--border);
         flex-direction: column;
         align-items: stretch;
-        gap: 17px;
+        gap: 0;
       }
-      .nav-links.open { display: flex; }
-      .nav-links a { font-size: 14px; }
-      .hero { padding: 50px 0; }
-      .hero h1 { letter-spacing: -2px; }
-      .hero-photo img { height: 310px; }
-      .cards, .gallery-grid { grid-template-columns: 1fr; }
-      .feature-grid { grid-template-columns: 1fr 1fr; }
-      .section { padding: 58px 0; }
-      .form-grid { grid-template-columns: 1fr; }
-      .field.full { grid-column: auto; }
-      .form-card { padding: 20px; }
-      .footer-grid { grid-template-columns: 1fr; }
-      .footer-bottom { flex-direction: column; }
-      .gallery-card img { height: 280px; }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 13px 0;
+        font-size: 13px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-links .nav-cta {
+        text-align: center;
+        margin-top: 12px;
+        border: 0;
+      }
+
+      .hero {
+        padding: 65px 0;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .oem-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: clamp(38px, 9vw, 58px);
+      }
+
+      .hero-image {
+        height: 380px;
+      }
+
+      .trust-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .trust-item:nth-child(2) {
+        border-right: 0;
+      }
+
+      .trust-item:nth-child(1),
+      .trust-item:nth-child(2) {
+        border-bottom: 1px solid var(--border);
+      }
+
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .product-image {
+        height: 310px;
+      }
+
+      .oem-panel {
+        padding: 28px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-about {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        width: 90%;
+      }
+
+      .brand-name {
+        font-size: 12px;
+      }
+
+      .brand-subtitle {
+        font-size: 9px;
+      }
+
+      .brand-mark {
+        width: 39px;
+        height: 39px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .hero-image {
+        height: 310px;
+      }
+
+      .check-list,
+      .oem-features,
+      .capability-grid,
+      .process-grid,
+      .gallery-grid,
+      .form-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-image {
+        height: 330px;
+      }
+
+      .gallery-item img {
+        height: 270px;
+      }
+
+      .form-group.full {
+        grid-column: auto;
+      }
+
+      .contact-form {
+        padding: 20px;
+      }
+
+      .cta-box {
+        padding: 35px 22px;
+      }
+
+      .footer-about {
+        grid-column: auto;
+      }
+
+      .copyright {
+        flex-direction: column;
+      }
+
+      .whatsapp-float {
+        right: 15px;
+        bottom: 15px;
+        width: 52px;
+        height: 52px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <div class="wrap nav">
-    <a class="brand" href="#home" aria-label="Prior Mark Industries home">
-      <span class="brand-symbol">P</span>
-      <span>
-        <span class="brand-name">PRIOR MARK</span>
-        <span class="brand-sub">INDUSTRIES · PAKISTAN</span>
-      </span>
-    </a>
+  <!-- NAVIGATION -->
+  <header class="navbar">
+    <div class="container nav-inner">
 
-    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
-
-    <nav class="nav-links" id="navLinks">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#products">Products</a>
-      <a href="#oem">OEM / Private Label</a>
-      <a href="#quality">Quality</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<main>
-
-  <!-- HOME -->
-  <section class="hero" id="home">
-    <div class="wrap hero-grid">
-      <div>
-        <div class="eyebrow">Sports Products · Sialkot, Pakistan</div>
-        <h1>YOUR BRAND.<br>OUR <span class="accent">CRAFT.</span></h1>
-        <p class="lead">
-          OEM and private-label sports product solutions for brands, teams and businesses.
-          Develop your products with custom designs, branding and product specifications.
-        </p>
-
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#contact">Discuss Your Project ↗</a>
-          <a class="btn btn-outline" href="#products">Explore Products</a>
+      <a href="#home" class="brand" aria-label="Prior Mark Industries home">
+        <div class="brand-mark">PM</div>
+        <div>
+          <div class="brand-name">PRIOR MARK INDUSTRIES</div>
+          <span class="brand-subtitle">SPORTS MANUFACTURING</span>
         </div>
+      </a>
 
-        <div class="trust-row">
-          <span class="trust-pill">OEM & Private Label</span>
-          <span class="trust-pill">Custom Branding</span>
-          <span class="trust-pill">Sialkot, Pakistan</span>
-        </div>
-      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
 
-      <div class="hero-photo">
-        <img
-          src="images/office/WhatsApp Image 2026-09-28 at 3.00.53 PM.jpeg"
-          alt="Prior Mark Industries office"
-          onerror="this.style.display='none';this.nextElementSibling.style.display='grid';"
-        >
-        <div class="photo-placeholder" style="display:none;min-height:420px;place-items:center;padding:25px;text-align:center;color:#a7b5c9;">
-          Office photo not found.<br>Check the filename and images/office folder.
-        </div>
-        <div class="photo-caption">
-          <strong>Prior Mark Industries</strong>
-          <span>Sports Products · Sialkot, Pakistan</span>
-        </div>
-      </div>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#products">Products</a>
+        <a href="#oem">OEM & Private Label</a>
+        <a href="#quality">Quality</a>
+        <a href="#contact" class="nav-cta">Contact Us <i class="fa-solid fa-arrow-right"></i></a>
+      </nav>
+
     </div>
-  </section>
+  </header>
 
-  <!-- PRODUCTS -->
-  <section class="section" id="products">
-    <div class="wrap">
-      <div class="section-heading">
-        <div class="eyebrow">What we offer</div>
-        <h2>PRODUCTS BUILT AROUND <span class="accent">YOUR BRAND.</span></h2>
-        <p class="lead">Explore our product categories and discuss the specifications, materials, designs and branding you need.</p>
+
+  <main>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+
+        <div class="hero-content">
+
+          <div class="hero-badge">
+            <i class="fa-solid fa-globe"></i>
+            SPORTS PRODUCTS FROM SIALKOT, PAKISTAN
+          </div>
+
+          <h1>
+            Your Vision.<br>
+            Our <span class="highlight">Manufacturing.</span>
+          </h1>
+
+          <p class="hero-copy">
+            Welcome to Prior Mark Industries. We specialize in goalkeeper gloves,
+            footballs and sportswear, offering OEM and private-label solutions
+            for brands, teams, clubs and businesses worldwide.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#products" class="btn btn-primary">
+              Explore Products <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="#contact" class="btn btn-outline">
+              Request a Quote
+            </a>
+          </div>
+
+          <div class="hero-features">
+            <span><i class="fa-solid fa-check-circle"></i> Custom Branding</span>
+            <span><i class="fa-solid fa-check-circle"></i> OEM & Private Label</span>
+            <span><i class="fa-solid fa-check-circle"></i> Worldwide Shipping</span>
+          </div>
+
+        </div>
+
+        <div class="hero-image-wrap">
+          <img
+            class="hero-image"
+            src="images/office/WhatsApp Image 2026-09-28 at 3.00.53 PM.jpeg"
+            alt="Prior Mark Industries business and sports manufacturing"
+            fetchpriority="high"
+          >
+
+          <div class="image-label">
+            <strong>Prior Mark Industries</strong>
+            <span>OEM • Private Label • Custom Sports Products</span>
+          </div>
+        </div>
+
       </div>
+    </section>
 
-      <div class="cards">
-        <article class="card">
-          <div class="card-image">
+
+    <!-- TRUST STRIP -->
+    <section class="trust-strip">
+      <div class="container trust-grid">
+
+        <div class="trust-item">
+          <i class="fa-solid fa-futbol"></i>
+          <strong>Sports Products</strong>
+          <span>Gloves, footballs & apparel</span>
+        </div>
+
+        <div class="trust-item">
+          <i class="fa-solid fa-pen-ruler"></i>
+          <strong>Custom Development</strong>
+          <span>Your logo, design & colors</span>
+        </div>
+
+        <div class="trust-item">
+          <i class="fa-solid fa-clipboard-check"></i>
+          <strong>Quality Focus</strong>
+          <span>Product checks & clear details</span>
+        </div>
+
+        <div class="trust-item">
+          <i class="fa-solid fa-earth-asia"></i>
+          <strong>Global Inquiries</strong>
+          <span>Working with buyers worldwide</span>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+
+        <div>
+          <img
+            class="about-image"
+            src="images/office/WhatsApp Image 2026-09-28 at 3.00.56 PM.jpeg"
+            alt="Prior Mark Industries company office"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="about-copy">
+          <span class="eyebrow">About Our Company</span>
+
+          <h2>
+            Building Sports Brands with
+            <span class="highlight">Purpose.</span>
+          </h2>
+
+          <p>
+            Prior Mark Industries is a Sialkot, Pakistan-based sports products
+            business focused on OEM and private-label solutions. We aim to help
+            businesses develop products that reflect their own brand identity.
+          </p>
+
+          <p>
+            From product specifications and logo placement to packaging and
+            order coordination, we work to understand each buyer's requirements
+            and communicate clearly throughout the process.
+          </p>
+
+          <ul class="check-list">
+            <li><i class="fa-solid fa-check"></i> Custom logos and branding</li>
+            <li><i class="fa-solid fa-check"></i> Product design coordination</li>
+            <li><i class="fa-solid fa-check"></i> Sample and bulk inquiries</li>
+            <li><i class="fa-solid fa-check"></i> Buyer-focused communication</li>
+            <li><i class="fa-solid fa-check"></i> Product specification options</li>
+            <li><i class="fa-solid fa-check"></i> International order support</li>
+          </ul>
+
+          <a href="#contact" class="btn btn-primary">
+            Discuss Your Project <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- PRODUCTS -->
+    <section class="section products-section" id="products">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">Our Product Range</span>
+          <h2>Sports Products for <span class="highlight">Your Brand.</span></h2>
+          <p>
+            Explore our core product categories and contact us to discuss
+            customization, specifications, samples and bulk requirements.
+          </p>
+        </div>
+
+        <div class="product-grid">
+
+          <!-- GK GLOVES -->
+          <article class="product-card">
+            <div class="product-image-wrap">
+              <span class="product-number">01 / GOALKEEPING</span>
+
+              <img
+                class="product-image"
+                src="images/gk-gloves/gk-gloves-01.jpeg.jpeg"
+                alt="Goalkeeper gloves by Prior Mark Industries"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="product-content">
+              <h3>Goalkeeper Gloves</h3>
+
+              <p>
+                Custom goalkeeper gloves with a choice of cuts, latex,
+                backhand materials, wrist straps, colors and branding.
+                Options depend on the selected design and order requirements.
+              </p>
+
+              <a
+                class="text-link"
+                href="https://wa.me/923496078457?text=Hello%20Prior%20Mark%20Industries%2C%20I%20am%20interested%20in%20custom%20goalkeeper%20gloves."
+                target="_blank"
+                rel="noopener"
+              >
+                Inquire About Gloves <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- FOOTBALLS -->
+          <article class="product-card">
+            <div class="product-image-wrap">
+              <span class="product-number">02 / FOOTBALLS</span>
+
+              <img
+                class="product-image"
+                src="images/office/WhatsApp Image 2026-09-28 at 3.00.53 PM.jpeg"
+                alt="Prior Mark Industries sports products"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="product-content">
+              <h3>Football Manufacturing</h3>
+
+              <p>
+                Discuss football designs, colors, printed logos and branding
+                requirements for your team, business or sports brand.
+                Specifications and order availability can be confirmed on inquiry.
+              </p>
+
+              <a
+                class="text-link"
+                href="https://wa.me/923496078457?text=Hello%20Prior%20Mark%20Industries%2C%20I%20would%20like%20to%20inquire%20about%20custom%20footballs."
+                target="_blank"
+                rel="noopener"
+              >
+                Inquire About Footballs <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- SPORTSWEAR -->
+          <article class="product-card">
+            <div class="product-image-wrap">
+              <span class="product-number">03 / SPORTSWEAR</span>
+
+              <img
+                class="product-image"
+                src="images/office/WhatsApp Image 2026-09-28 at 3.00.56 PM.jpeg"
+                alt="Prior Mark Industries sportswear and business products"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="product-content">
+              <h3>Sportswear & Apparel</h3>
+
+              <p>
+                Explore custom sportswear inquiries for tracksuits, hoodies,
+                T-shirts, teamwear and other apparel, with your preferred
+                colors, designs and branding.
+              </p>
+
+              <a
+                class="text-link"
+                href="https://wa.me/923496078457?text=Hello%20Prior%20Mark%20Industries%2C%20I%20would%20like%20to%20discuss%20custom%20sportswear."
+                target="_blank"
+                rel="noopener"
+              >
+                Inquire About Sportswear <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- OEM & PRIVATE LABEL -->
+    <section class="section" id="oem">
+      <div class="container">
+
+        <div class="oem-panel">
+          <div class="oem-grid">
+
+            <div class="oem-copy">
+              <span class="eyebrow">OEM & Private Label</span>
+
+              <h2>
+                Make Your Brand
+                <span class="highlight">Your Own.</span>
+              </h2>
+
+              <p>
+                Developing your own sports brand? Share your product idea,
+                specifications, quantity and target market. We can discuss
+                customization options and the next steps for your project.
+              </p>
+
+              <a href="#contact" class="btn btn-primary">
+                Start Your Inquiry <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+
+            <div class="oem-features">
+
+              <div class="oem-feature">
+                <i class="fa-solid fa-pen-nib"></i>
+                <h3>Custom Logo</h3>
+                <p>Discuss your logo placement and brand identity.</p>
+              </div>
+
+              <div class="oem-feature">
+                <i class="fa-solid fa-palette"></i>
+                <h3>Colors & Design</h3>
+                <p>Share your preferred colors, artwork and design details.</p>
+              </div>
+
+              <div class="oem-feature">
+                <i class="fa-solid fa-box-open"></i>
+                <h3>Packaging</h3>
+                <p>Discuss packaging options suitable for your brand.</p>
+              </div>
+
+              <div class="oem-feature">
+                <i class="fa-solid fa-boxes-stacked"></i>
+                <h3>Order Planning</h3>
+                <p>Discuss sample quantities, bulk quantities and timelines.</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- CAPABILITIES -->
+    <section class="section" id="capabilities">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">Our Capabilities</span>
+          <h2>Designed Around <span class="highlight">Your Requirements.</span></h2>
+          <p>
+            Every project begins with understanding what you need.
+            Product specifications, customization and order details are
+            discussed before confirmation.
+          </p>
+        </div>
+
+        <div class="capability-grid">
+
+          <div class="capability-card">
+            <i class="fa-solid fa-futbol"></i>
+            <h3>Product Options</h3>
+            <p>Discuss product categories, materials, cuts and construction details.</p>
+          </div>
+
+          <div class="capability-card">
+            <i class="fa-solid fa-vector-square"></i>
+            <h3>Brand Customization</h3>
+            <p>Share your artwork, logos, color preferences and branding needs.</p>
+          </div>
+
+          <div class="capability-card">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <h3>Quality Checks</h3>
+            <p>Confirm agreed product specifications and inspection requirements.</p>
+          </div>
+
+          <div class="capability-card">
+            <i class="fa-solid fa-truck-fast"></i>
+            <h3>Shipping Coordination</h3>
+            <p>Discuss shipping methods, destination, costs and estimated delivery.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- QUALITY & PROCESS -->
+    <section class="section process-section" id="quality">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">Our Working Process</span>
+          <h2>Clear Steps. <span class="highlight">Clear Communication.</span></h2>
+          <p>
+            We aim to make your inquiry straightforward, from the first
+            discussion to order coordination and shipping.
+          </p>
+        </div>
+
+        <div class="process-grid">
+
+          <div class="process-card">
+            <div class="process-step">STEP 01</div>
+            <h3>Share Your Requirements</h3>
+            <p>Tell us the product, specifications, sizes, quantity and destination.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-step">STEP 02</div>
+            <h3>Review the Details</h3>
+            <p>Discuss available options, customization, pricing and order terms.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-step">STEP 03</div>
+            <h3>Confirm Your Order</h3>
+            <p>Finalize the agreed design, specifications, quantity and timeline.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-step">STEP 04</div>
+            <h3>Production & Shipping</h3>
+            <p>Coordinate the agreed order process, quality checks and shipment details.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- GALLERY -->
+    <section class="section" id="gallery">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">Company Gallery</span>
+          <h2>A Closer Look at <span class="highlight">Prior Mark.</span></h2>
+          <p>
+            Explore our company and product presentation. Contact us for
+            current product photos, specifications and available designs.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+
+          <div class="gallery-item">
             <img
               src="images/gk-gloves/gk-gloves-01.jpeg.jpeg"
-              alt="Prior Mark Industries goalkeeper gloves"
+              alt="Goalkeeper gloves product gallery"
               loading="lazy"
-              onerror="this.style.display='none';this.parentElement.innerHTML='<div style=&quot;padding:35px;text-align:center;color:#a7b5c9&quot;>Upload gk-gloves-01.jpeg.jpeg to images/gk-gloves/</div>';"
             >
-          </div>
-          <div class="card-body">
-            <h3>Goalkeeper Gloves</h3>
-            <p>Custom goalkeeper glove concepts with options for latex, cut, backhand, wrist strap, colours and logo placement.</p>
-            <a class="text-link" href="#contact" data-product="Goalkeeper Gloves">Discuss Glove Requirements ↗</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-image" style="display:grid;place-items:center;color:#a7b5c9;">
-            <div style="text-align:center;padding:25px;">
-              <div style="font-size:45px;">⚽</div>
-              <strong>Football Products</strong>
-              <p style="font-size:12px;margin-top:8px;">Add your football photo here when available.</p>
+            <div class="gallery-caption">
+              <h3>Goalkeeper Gloves</h3>
+              <p>Custom designs and private-label inquiries</p>
             </div>
           </div>
-          <div class="card-body">
-            <h3>Footballs</h3>
-            <p>Discuss football designs, colours, surface graphics and custom branding for your product range.</p>
-            <a class="text-link" href="#contact" data-product="Footballs">Discuss Footballs ↗</a>
-          </div>
-        </article>
 
-        <article class="card">
-          <div class="card-image" style="display:grid;place-items:center;color:#a7b5c9;">
-            <div style="text-align:center;padding:25px;">
-              <div style="font-size:45px;">◈</div>
-              <strong>Sportswear Products</strong>
-              <p style="font-size:12px;margin-top:8px;">Add your sportswear photo here when available.</p>
+          <div class="gallery-item">
+            <img
+              src="images/office/WhatsApp Image 2026-09-28 at 3.00.53 PM.jpeg"
+              alt="Prior Mark Industries company image"
+              loading="lazy"
+            >
+            <div class="gallery-caption">
+              <h3>Our Company</h3>
+              <p>Sports products and brand development</p>
             </div>
           </div>
-          <div class="card-body">
-            <h3>Sportswear</h3>
-            <p>Explore custom teamwear and apparel concepts, including T-shirts, hoodies, tracksuits and branding.</p>
-            <a class="text-link" href="#contact" data-product="Sportswear">Discuss Sportswear ↗</a>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">Contact Our Team</span>
+          <h2>Let's Discuss Your <span class="highlight">Next Project.</span></h2>
+          <p>
+            Contact Prior Mark Industries for product information, custom
+            branding, samples, bulk orders and shipping inquiries.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+
+          <div class="contact-copy">
+
+            <h3>Get in Touch</h3>
+
+            <p>
+              Send us your requirements. Please include your product type,
+              quantity, specifications and destination so we can understand
+              your inquiry.
+            </p>
+
+            <div class="contact-detail">
+              <div class="contact-icon">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div>
+                <strong>Email</strong>
+                <a href="mailto:priormarkindustries@gmail.com">
+                  priormarkindustries@gmail.com
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <div class="contact-icon">
+                <i class="fa-brands fa-whatsapp"></i>
+              </div>
+              <div>
+                <strong>WhatsApp</strong>
+                <a href="https://wa.me/923496078457" target="_blank" rel="noopener">
+                  +92 349 6078457
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <div class="contact-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <strong>Location</strong>
+                <span>Sialkot, Punjab, Pakistan</span>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <div class="contact-icon">
+                <i class="fa-solid fa-building"></i>
+              </div>
+              <div>
+                <strong>Business</strong>
+                <span>Prior Mark Industries</span>
+              </div>
+            </div>
+
           </div>
-        </article>
-      </div>
-    </div>
-  </section>
 
-  <!-- ABOUT -->
-  <section class="section dark-band" id="about">
-    <div class="wrap split">
-      <div class="about-photo">
-        <img
-          src="images/office/WhatsApp Image 2026-09-28 at 3.00.56 PM.jpeg"
-          alt="Prior Mark Industries workspace"
-          loading="lazy"
-          onerror="this.style.display='none';this.parentElement.innerHTML='<div style=&quot;padding:35px;display:grid;place-items:center;min-height:390px;color:#a7b5c9;text-align:center&quot;>Second office photo not found.<br>Check images/office/</div>';"
-        >
-      </div>
 
-      <div>
-        <div class="eyebrow">About our company</div>
-        <h2>MEET <span class="accent">PRIOR MARK.</span></h2>
-        <p>
-          Prior Mark Industries is a Sialkot, Pakistan-based business focused on sports
-          products, OEM development and private-label opportunities for international
-          brands, teams and businesses.
-        </p>
-        <p style="margin-top:14px;">
-          We aim to build long-term business relationships through clear communication,
-          product development and attention to the requirements agreed with each buyer.
-        </p>
+          <!-- CONTACT FORM -->
+          <form class="contact-form" id="contactForm">
 
-        <ul class="check-list">
-          <li>Custom logo and product branding discussions</li>
-          <li>Product specifications and design development</li>
-          <li>Sample and bulk-order inquiries</li>
-          <li>Communication for international buyers</li>
-        </ul>
+            <div class="form-grid">
 
-        <a class="btn btn-primary" href="#contact">Contact Our Team ↗</a>
-      </div>
-    </div>
-  </section>
+              <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your full name"
+                  required
+                >
+              </div>
 
-  <!-- OEM / PRIVATE LABEL -->
-  <section class="section" id="oem">
-    <div class="wrap">
-      <div class="section-heading">
-        <div class="eyebrow">OEM / Private Label</div>
-        <h2>MAKE YOUR PRODUCT <span class="accent">YOUR OWN.</span></h2>
-        <p class="lead">Share your product brief and branding requirements so we can discuss a suitable development approach.</p>
-      </div>
+              <div class="form-group">
+                <label for="company">Company / Brand</label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  placeholder="Your company name"
+                >
+              </div>
 
-      <div class="feature-grid">
-        <div class="feature">
-          <span class="feature-number">01 / DESIGN</span>
-          <h3>Product Design</h3>
-          <p>Discuss colours, construction, design references and product details.</p>
-        </div>
-        <div class="feature">
-          <span class="feature-number">02 / BRANDING</span>
-          <h3>Custom Identity</h3>
-          <p>Discuss your logo, label, packaging and brand presentation.</p>
-        </div>
-        <div class="feature">
-          <span class="feature-number">03 / ORDER</span>
-          <h3>Order Planning</h3>
-          <p>Share your quantity, size breakdown, target budget and timeline.</p>
-        </div>
-        <div class="feature">
-          <span class="feature-number">04 / DELIVERY</span>
-          <h3>Shipping Discussion</h3>
-          <p>Confirm destination, delivery method, costs and estimated schedule.</p>
-        </div>
-      </div>
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  required
+                >
+              </div>
 
-      <div style="margin-top:28px;">
-        <a class="btn btn-primary" href="#contact">Start an OEM Inquiry ↗</a>
-      </div>
-    </div>
-  </section>
+              <div class="form-group">
+                <label for="country">Country *</label>
+                <input
+                  type="text"
+                  id="country"
+                  name="country"
+                  placeholder="Your country"
+                  required
+                >
+              </div>
 
-  <!-- QUALITY -->
-  <section class="section dark-band" id="quality">
-    <div class="wrap">
-      <div class="section-heading">
-        <div class="eyebrow">Quality & communication</div>
-        <h2>DETAILS MATTER. <span class="accent">SO DOES TRUST.</span></h2>
-        <p class="lead">
-          Product quality starts with clear specifications and realistic expectations.
-          We encourage buyers to confirm materials, construction, branding, samples and
-          order terms before placing an order.
-        </p>
-      </div>
+              <div class="form-group">
+                <label for="product">Product *</label>
+                <select id="product" name="product" required>
+                  <option value="">Select a product</option>
+                  <option value="Goalkeeper Gloves">Goalkeeper Gloves</option>
+                  <option value="Footballs">Footballs</option>
+                  <option value="Sportswear">Sportswear</option>
+                  <option value="Multiple Products">Multiple Products</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
 
-      <div class="feature-grid">
-        <div class="feature">
-          <span class="feature-number">01</span>
-          <h3>Specifications</h3>
-          <p>Confirm product details and materials before production.</p>
-        </div>
-        <div class="feature">
-          <span class="feature-number">02</span>
-          <h3>Branding Review</h3>
-          <p>Review logo placement and design requirements.</p>
-        </div>
-        <div class="feature">
-          <span class="feature-number">03</span>
-          <h3>Order Confirmation</h3>
-          <p>Discuss quantity, pricing, timeline and shipping terms.</p>
-        </div>
-        <div class="feature">
-          <span class="feature-number">04</span>
-          <h3>Clear Communication</h3>
-          <p>Keep product expectations and agreed terms clear.</p>
+              <div class="form-group">
+                <label for="quantity">Estimated Quantity</label>
+                <input
+                  type="text"
+                  id="quantity"
+                  name="quantity"
+                  placeholder="e.g. 100 pairs"
+                >
+              </div>
+
+              <div class="form-group full">
+                <label for="message">Your Requirements *</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Describe your product, materials, design, logo, sizes and other requirements..."
+                  required
+                ></textarea>
+              </div>
+
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+              Send Inquiry by Email <i class="fa-solid fa-paper-plane"></i>
+            </button>
+
+            <p class="form-note">
+              This form opens your email application with the inquiry details.
+              Your message is not sent automatically by the website.
+            </p>
+
+          </form>
+
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- GALLERY -->
-  <section class="section" id="gallery">
-    <div class="wrap">
-      <div class="section-heading">
-        <div class="eyebrow">Visual portfolio</div>
-        <h2>PRODUCTS. <span class="accent">DETAILS. IDEAS.</span></h2>
-        <p class="lead">Explore available company and product images. More product photos can be added as they become available.</p>
-      </div>
 
-      <div class="gallery-grid">
-        <article class="gallery-card">
-          <img
-            src="images/office/WhatsApp Image 2026-09-28 at 3.00.53 PM.jpeg"
-            alt="Prior Mark Industries office photo"
-            loading="lazy"
-            onclick="openViewer(this)"
+    <!-- FINAL CTA -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-box">
+
+          <h2>Ready to Build Your Sports Brand?</h2>
+
+          <p>
+            Share your ideas with Prior Mark Industries and discuss
+            product customization, specifications and order requirements.
+          </p>
+
+          <a
+            href="https://wa.me/923496078457?text=Hello%20Prior%20Mark%20Industries%2C%20I%20would%20like%20to%20discuss%20a%20sports%20products%20inquiry."
+            target="_blank"
+            rel="noopener"
+            class="btn btn-dark"
           >
-          <div class="gallery-info">
-            <strong>Our Office</strong>
-            <p>Prior Mark Industries · Sialkot, Pakistan</p>
-          </div>
-        </article>
-
-        <article class="gallery-card">
-          <img
-            src="images/gk-gloves/gk-gloves-01.jpeg.jpeg"
-            alt="Goalkeeper glove product photo"
-            loading="lazy"
-            onclick="openViewer(this)"
-          >
-          <div class="gallery-info">
-            <strong>Goalkeeper Gloves</strong>
-            <p>Product design and branding</p>
-          </div>
-        </article>
-
-        <article class="gallery-card">
-          <img
-            src="images/office/WhatsApp Image 2026-09-28 at 3.00.56 PM.jpeg"
-            alt="Prior Mark Industries second office photo"
-            loading="lazy"
-            onclick="openViewer(this)"
-          >
-          <div class="gallery-info">
-            <strong>Company Workspace</strong>
-            <p>Business and workspace presentation</p>
-          </div>
-        </article>
-      </div>
-
-      <p style="font-size:12px;margin-top:18px;">
-        Please use accurate captions and do not present concept visuals as completed customer orders or actual manufacturing activities.
-      </p>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="section dark-band" id="contact">
-    <div class="wrap contact-grid">
-      <div>
-        <div class="eyebrow">Start a conversation</div>
-        <h2>LET'S TALK ABOUT <span class="accent">YOUR PROJECT.</span></h2>
-        <p class="lead">Tell us about your product, specifications, estimated quantity and destination country.</p>
-
-        <div class="contact-list">
-          <a class="contact-option" href="mailto:priormarkindustries@gmail.com">
-            <small>Email</small>
-            <strong>priormarkindustries@gmail.com</strong>
+            <i class="fa-brands fa-whatsapp"></i>
+            Discuss on WhatsApp
           </a>
 
-          <a class="contact-option" href="https://wa.me/923496078457" target="_blank" rel="noopener noreferrer">
-            <small>WhatsApp</small>
-            <strong>+92 349 6078457</strong>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-about">
+          <a href="#home" class="brand">
+            <div class="brand-mark">PM</div>
+            <div>
+              <div class="brand-name">PRIOR MARK INDUSTRIES</div>
+              <span class="brand-subtitle">SPORTS MANUFACTURING</span>
+            </div>
           </a>
 
-          <div class="contact-option">
-            <small>Location</small>
-            <strong>Sialkot, Pakistan</strong>
+          <p>
+            Sports products, OEM and private-label inquiries from Sialkot,
+            Pakistan. Our goal is to help brands develop customized products
+            through clear communication and agreed specifications.
+          </p>
+
+          <div class="social-links">
+
+            <a href="https://www.instagram.com/priormarkindustries/"
+               target="_blank" rel="noopener" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="https://web.facebook.com/priormarkindustries"
+               target="_blank" rel="noopener" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="https://www.youtube.com/@PriorMarkIndustries"
+               target="_blank" rel="noopener" aria-label="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+
+            <a href="https://www.tiktok.com/@priormarkindustries"
+               target="_blank" rel="noopener" aria-label="TikTok">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+
+            <a href="https://pk.linkedin.com/in/prior-mark-industries%C2%AE-b3154341b"
+               target="_blank" rel="noopener" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+
           </div>
         </div>
+
+
+        <div>
+          <h3>Quick Links</h3>
+
+          <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#products">Our Products</a>
+            <a href="#oem">OEM & Private Label</a>
+            <a href="#quality">Quality & Process</a>
+            <a href="#contact">Contact Us</a>
+          </div>
+        </div>
+
+
+        <div>
+          <h3>Our Products</h3>
+
+          <div class="footer-links">
+            <a href="#products">Goalkeeper Gloves</a>
+            <a href="#products">Footballs</a>
+            <a href="#products">Sportswear & Apparel</a>
+            <a href="#oem">Custom Branding</a>
+            <a href="#contact">Bulk Order Inquiries</a>
+            <a href="mailto:priormarkindustries@gmail.com">Email Our Team</a>
+          </div>
+        </div>
+
       </div>
 
-      <form class="form-card" id="inquiryForm">
-        <div class="eyebrow" style="margin-bottom:20px;">Project inquiry form</div>
+      <div class="copyright">
+        <span>
+          © <span id="year"></span> Prior Mark Industries. All rights reserved.
+        </span>
 
-        <div class="form-grid">
-          <div class="field">
-            <label for="name">Your name *</label>
-            <input id="name" name="name" required placeholder="Full name">
-          </div>
+        <span>Sports Products • OEM • Private Label</span>
+      </div>
 
-          <div class="field">
-            <label for="company">Company / brand</label>
-            <input id="company" name="company" placeholder="Company name">
-          </div>
-
-          <div class="field">
-            <label for="email">Email address *</label>
-            <input id="email" name="email" type="email" required placeholder="you@example.com">
-          </div>
-
-          <div class="field">
-            <label for="country">Destination country</label>
-            <input id="country" name="country" placeholder="Country">
-          </div>
-
-          <div class="field">
-            <label for="product">Product category *</label>
-            <select id="product" name="product" required>
-              <option value="">Select a product</option>
-              <option>Goalkeeper Gloves</option>
-              <option>Footballs</option>
-              <option>Sportswear</option>
-              <option>OEM / Private Label Inquiry</option>
-              <option>Other</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <label for="quantity">Estimated quantity</label>
-            <input id="quantity" name="quantity" placeholder="e.g. 100 pairs">
-          </div>
-
-          <div class="field full">
-            <label for="message">Project details *</label>
-            <textarea id="message" name="message" required placeholder="Specifications, materials, sizes, logo, budget and target delivery date..."></textarea>
-          </div>
-        </div>
-
-        <p class="form-help">This form opens a prepared email in your email application. It does not directly send or store your information.</p>
-        <button class="btn btn-primary" type="submit">Prepare Inquiry Email ↗</button>
-      </form>
     </div>
-  </section>
+  </footer>
 
-</main>
 
-<!-- IMAGE VIEWER -->
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" onclick="closeViewer(event)">
-  <button class="lightbox-close" type="button" aria-label="Close photo" onclick="closeViewer(event)">×</button>
-  <img id="viewerImage" src="" alt="Enlarged product photo">
-</div>
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a
+    class="whatsapp-float"
+    href="https://wa.me/923496078457?text=Hello%20Prior%20Mark%20Industries%2C%20I%20am%20interested%20in%20your%20sports%20products."
+    target="_blank"
+    rel="noopener"
+    aria-label="Contact Prior Mark Industries on WhatsApp"
+  >
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
 
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div>
-        <a class="brand" href="#home">
-          <span class="brand-symbol">P</span>
-          <span>
-            <span class="brand-name">PRIOR MARK</span>
-            <span class="brand-sub">INDUSTRIES · PAKISTAN</span>
-          </span>
-        </a>
 
-        <p>OEM and private-label sports product inquiries for brands, teams and businesses. Based in Sialkot, Pakistan.</p>
+  <!-- JAVASCRIPT -->
+  <script>
+    // Mobile navigation
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
 
-        <div class="socials">
-          <a href="https://www.instagram.com/priormarkindustries/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
-          <a href="https://web.facebook.com/priormarkindustries" target="_blank" rel="noopener noreferrer" aria-label="Facebook">FB</a>
-          <a href="https://www.youtube.com/@PriorMarkIndustries" target="_blank" rel="noopener noreferrer" aria-label="YouTube">YT</a>
-          <a href="https://www.tiktok.com/@priormarkindustries" target="_blank" rel="noopener noreferrer" aria-label="TikTok">TK</a>
-          <a href="https://pk.linkedin.com/in/prior-mark-industries%C2%AE-b3154341b" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">IN</a>
-        </div>
-      </div>
+    menuToggle.addEventListener("click", function () {
+      const isOpen = navLinks.classList.toggle("active");
 
-      <div>
-        <h4>Explore</h4>
-        <div class="footer-links">
-          <a href="#about">About Us</a>
-          <a href="#products">Products</a>
-          <a href="#oem">OEM / Private Label</a>
-          <a href="#quality">Quality</a>
-          <a href="#gallery">Gallery</a>
-        </div>
-      </div>
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
 
-      <div>
-        <h4>Contact</h4>
-        <div class="footer-links">
-          <a href="mailto:priormarkindustries@gmail.com">Email Us</a>
-          <a href="https://wa.me/923496078457" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-          <span class="muted">Sialkot, Pakistan</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <span>© <span id="year"></span> Prior Mark Industries. All rights reserved.</span>
-      <span>OEM · PRIVATE LABEL · CUSTOM BRANDING</span>
-    </div>
-  </div>
-</footer>
-
-<script>
-  // Mobile navigation
-  const menuToggle = document.getElementById("menuToggle");
-  const navLinks = document.getElementById("navLinks");
-
-  menuToggle.addEventListener("click", function () {
-    const isOpen = navLinks.classList.toggle("open");
-    menuToggle.setAttribute("aria-expanded", String(isOpen));
-    menuToggle.textContent = isOpen ? "×" : "☰";
-  });
-
-  navLinks.querySelectorAll("a").forEach(function (link) {
-    link.addEventListener("click", function () {
-      navLinks.classList.remove("open");
-      menuToggle.setAttribute("aria-expanded", "false");
-      menuToggle.textContent = "☰";
+      menuToggle.innerHTML = isOpen
+        ? '<i class="fa-solid fa-xmark"></i>'
+        : '<i class="fa-solid fa-bars"></i>';
     });
-  });
 
-  // Current year in footer
-  document.getElementById("year").textContent = new Date().getFullYear();
-
-  // Enlarge gallery photos
-  function openViewer(image) {
-    const viewer = document.getElementById("lightbox");
-    const viewerImage = document.getElementById("viewerImage");
-
-    viewerImage.src = image.src;
-    viewerImage.alt = image.alt;
-    viewer.classList.add("open");
-    document.body.style.overflow = "hidden";
-  }
-
-  function closeViewer(event) {
-    if (
-      event.target.id === "lightbox" ||
-      event.target.classList.contains("lightbox-close")
-    ) {
-      document.getElementById("lightbox").classList.remove("open");
-      document.getElementById("viewerImage").src = "";
-      document.body.style.overflow = "";
-    }
-  }
-
-  document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape") {
-      document.getElementById("lightbox").classList.remove("open");
-      document.getElementById("viewerImage").src = "";
-      document.body.style.overflow = "";
-    }
-  });
-
-  // Preselect product when a product link is clicked
-  document.querySelectorAll("[data-product]").forEach(function (link) {
-    link.addEventListener("click", function () {
-      document.getElementById("product").value = link.dataset.product;
+    // Close mobile menu after selecting a link
+    document.querySelectorAll("#navLinks a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+      });
     });
-  });
 
-  // Prepare an email from the inquiry form
-  document.getElementById("inquiryForm").addEventListener("submit", function (event) {
-    event.preventDefault();
+    // Automatically update copyright year
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
 
-    const form = new FormData(event.currentTarget);
-    const subject = encodeURIComponent(
-      "Website Inquiry - " + form.get("product")
-    );
+    // Contact form: prepare an email in the visitor's email application
+    document.getElementById("contactForm").addEventListener("submit", function (event) {
+      event.preventDefault();
 
-    const body = encodeURIComponent(
-      "Hello Prior Mark Industries,\n\n" +
-      "I would like to discuss a product inquiry.\n\n" +
-      "Name: " + (form.get("name") || "") + "\n" +
-      "Company / Brand: " + (form.get("company") || "") + "\n" +
-      "Email: " + (form.get("email") || "") + "\n" +
-      "Country: " + (form.get("country") || "") + "\n" +
-      "Product: " + (form.get("product") || "") + "\n" +
-      "Quantity: " + (form.get("quantity") || "") + "\n\n" +
-      "Project Details:\n" + (form.get("message") || "") + "\n\n" +
-      "Best regards"
-    );
+      const name = document.getElementById("name").value.trim();
+      const company = document.getElementById("company").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const country = document.getElementById("country").value.trim();
+      const product = document.getElementById("product").value;
+      const quantity = document.getElementById("quantity").value.trim();
+      const message = document.getElementById("message").value.trim();
 
-    window.location.href =
-      "mailto:priormarkindustries@gmail.com?subject=" +
-      subject + "&body=" + body;
-  });
-</script>
+      const subject = "Website Inquiry - " + product;
+
+      const body =
+        "New inquiry from the Prior Mark Industries website\n\n" +
+        "Name: " + name + "\n" +
+        "Company / Brand: " + (company || "Not provided") + "\n" +
+        "Email: " + email + "\n" +
+        "Country: " + country + "\n" +
+        "Product: " + product + "\n" +
+        "Estimated Quantity: " + (quantity || "Not provided") + "\n\n" +
+        "Requirements:\n" + message;
+
+      const mailto =
+        "mailto:priormarkindustries@gmail.com" +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+
+      window.location.href = mailto;
+    });
+  </script>
 
 </body>
 </html>
